@@ -1,0 +1,122 @@
+html , body {
+height: 100%;
+}
+
+* {
+    margin: 0  ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: rgb(239, 239, 239);
+    color: 666;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Nav Styles*/
+
+header{
+    background-color: black;
+    padding: 2rem 0;
+
+}
+
+
+nav{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.menu > li ,.menu > a{
+    display: inline-block;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 1.5rem;
+    transition: background-color .22s ease, color .22s ease;
+}
+
+.menu a:hover{
+    background-color:rgb(152, 239, 152) ;
+    color: white;
+}
+
+
+/*submenu level 1 styles*/
+
+.submenu{
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    left: 0;
+    display: none;
+
+}
+
+
+/*show menu on hover*/
+
+.menu li:hover> .submenu {
+    display: block;
+    animation: slideup .3s ease;
+
+}
+
+
+/*Animation  Keyframes*/
+
+@keyframes slideup {
+    0%  {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideleft {
+    0%  {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+
+
+
