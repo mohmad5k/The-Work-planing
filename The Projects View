@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="strt.css">
+    <style>
+        html , body {
+            height: 100%;
+            }
+            
+            * {
+                margin: 0  ;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            ul{
+                list-style: none;
+            }
+            
+            body{
+                font-size: 1rem;
+                line-height: 1.6;
+                background-color: rgb(255, 255, 255);
+                color: 666;
+                font-family: 'Roboto Condensed', sans-serif;
+                justify-content: space-around;
+                
+            }
+            
+            /* Nav Styles*/
+            
+            header{
+                background-color: black;
+                padding: 2rem 0;
+            
+            }
+            
+            
+            nav{
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+            
+            .logo{
+                font-size: 1.5rem;
+                color: white;
+                font-weight: 700;
+            }
+            
+            .menu > li ,.menu > a{
+                display: inline-block;
+            }
+            
+            .menu li{
+                position: relative;
+            }
+            
+            .menu a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                padding: 10px 1.5rem;
+                transition: background-color .22s ease, color .22s ease;
+            }
+            
+            .menu a:hover{
+                background-color:rgb(152, 239, 152) ;
+                color: black;
+            }
+            
+            
+            /*submenu level 1 styles*/
+            
+            .submenu{
+                position: absolute;
+                background-color: black;
+                width: 200px;
+                left: 0;
+                display: none;
+            
+            }
+            
+            
+            /*show menu on hover*/
+            
+            .menu li:hover> .submenu {
+                display: block;
+                animation: slideup .3s ease;
+            
+            }
+            
+            
+            /*Animation  Keyframes*/
+            
+            @keyframes slideup {
+                0%  {
+                    opacity: 0;
+                    transform: translateX(18px);
+                }
+            
+            
+                100% {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            
+            @keyframes slideleft {
+                0%  {
+                    opacity: 0;
+                    transform: translateX(18px);
+                }
+            
+            
+                100% {
+                    opacity: 1;
+                    transform: none;
+                }
+            
+            }
+
+            /*body styls*/
+
+            .containerB {
+                border: 1px solid;
+                padding: 10px;
+                width: 540px;
+                margin:10px;
+
+            }
+
+            .container button {
+                text-align: left;
+                margin: 10px;
+                display: grid;
+                justify-content: space-between;
+                border: 2px solid black;
+                color: black;
+                padding: 10px;
+                width: 400px;
+                background: none;
+                font-size: 18px;
+                letter-spacing: 1px;
+                cursor: pointer;
+                position: relative;
+                transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+            }
+            
+            /* Using a pseudo-element to create a background transition effect */
+            .container button::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: black;
+                z-index: -1;
+                transition: clip-path 0.5s ease-in-out;
+                clip-path: circle(0%); /* Start with a fully visible circle */
+            }
+            .container button :hover {
+                color: white;
+                background-color: black;
+                border-color: white ;
+                    }
+            .container :hover{
+                color: white;
+                background-color: black;
+                border-color: white ;
+            }
+            .container button:hover::before {
+                clip-path: circle(100%); /* Hide the circular background on hover */
+            }
+            
+            
+                    .container a
+                    {
+                        
+                        font-size: medium;
+                        color:black;
+                        padding: 5px 1.5rem;
+        
+                        
+                    }   
+                    
+            
+            .containerB .sortbtn{
+                
+                padding: 10px;
+                align-self: flex-end;
+                font-size:medium;
+                
+                
+
+            }
+
+            
+            
+            
+            
+            
+            
+            
+            
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class = "logo">TSA Work Planning</h1>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Views</a>
+                    <ul class="submenu">
+                        <li><a href="#">Work plan View</a></li>
+                        <li> <a href="https://mohmad5k.github.io/The-Gantt/">Resource Histogram</a></li>
+                        <li><a href="#">Sales plan View</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Work PLanning Data</a> 
+                    <ul class="submenu">
+                       <li><a href="#">Project Description</a></li>
+                       <li> <a href="#">Estimate Hours</a></li>
+                       <li><a href="#">Project Data Entry</a></li>
+                       <li><a href="#">Resource Allocation</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">User's Data Entry</a>
+                    <ul class="submenu">
+                           <li><a href="#">Work plan View</a></li>
+                           <li><a href="#">Project Progress</a></li>
+                           <li><a href="#">User Availability</a></li>
+                       </ul>
+                </li>
+                <li><a href="#">Admin</a> 
+                    <ul class="submenu">
+                            <li> <a href="#">Access Permissions </a></li>
+                            <li> <a href="#">Role</a></li>
+                            <li> <a href="#">New Feature Popup</a></li>
+                            <li> <a href="#">Change Password</a></li>
+                            <li> <a href="#">Dashbored</a></li>
+                            <li> <a href="#">Logout</a></li>
+                   </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id = "sheetNamesContainerB" class="containerB">
+        <div>
+            <p>Available  Projects</p>
+        </div>
+        <div> <button id = "sort" class="sortbtn"> Sort</button></div>
+        <div id = "sheetNamesContainer" class="container">
+            
+               
+            
+            
+        </div>
+           
+        
+        
+    </div>
+
+
+
+
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script>
+
+
+    // Load the Google Sheets API
+    gapi.load('client', initGoogleSheetsAPI);
+
+    function initGoogleSheetsAPI() {
+      gapi.client.init({
+        apiKey: 'AIzaSyC1YBfz6znLEessxTPGSZjIJtM1CRAPZ24',
+        discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+      }).then(fetchSheetNames).catch(function(error) {
+        console.log('Error initializing Google Sheets API: ' + error.details);
+      });
+    }
+    function fetchSheetNames() {
+        gapi.client.sheets.spreadsheets.get({
+            spreadsheetId: '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA',
+        }).then(function(response) {
+            var sheets = response.result.sheets;
+            if (sheets && sheets.length > 0) {
+          console.log('Sheet names retrieved:');
+            var container = document.getElementById('sheetNamesContainer'); // Replace with your container element ID
+            for (var i = 0; i < sheets.length; i++) {
+                var sheetTitle = sheets[i].properties.title;
+                var sheetElement = document.createElement('button');
+                
+            
+                var linkElement = document.createElement('a');
+                linkElement.href = "#"; // Set the link href, defaulting to an empty string if not provided
+                sheetElement.textContent = sheetTitle;
+            
+            
+
+
+                // Skip specific sheets by title
+                if (
+                    sheetTitle === "Employees Report" ||
+                    sheetTitle === "AVAILABLITY SHEET" ||
+                    sheetTitle === "Employees Allocation" ||
+                    sheetTitle === "Reports" ||
+                    sheetTitle === "Tasks' Source" ||
+                    sheetTitle === "Employee Availability"
+                ) {
+                    continue;
+                }
+                console.log(sheets);
+                sheetElement.appendChild(linkElement);
+                container.appendChild(sheetElement);
+                
+
+            }
+        } else {
+            console.log('No sheets found in the spreadsheet.');
+        }
+    }).catch(function(error) {
+        console.log('Error fetching sheet names: ' + error.details);
+    });
+}
+    function createSheetElement(container, sheetTitle) {
+        var sheetElement = document.createElement('div');
+        sheetElement.textContent = sheetTitle;
+        sheetElement.classList.add = "btn"
+        container.appendChild(sheetElement);
+    }
+    
+    var sortButton = document.getElementById('sort');
+    sortButton.addEventListener('click', function() {
+        var container = document.getElementById('sheetNamesContainer');
+        var sortedSheetElements = Array.from(container.children).sort((a, b) => {
+            var titleA = a.textContent.trim().toLowerCase();
+            var titleB = b.textContent.trim().toLowerCase();
+            return titleA.localeCompare(titleB);
+        });
+        for (var i = 0; i < sortedSheetElements.length; i++) {
+            
+            container.appendChild(sortedSheetElements[i]);
+        }
+    });
+    
+    </script>
+</body>
+</html>
