@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link href="path/to/font-awesome/css/all.min.css">
 
     <style>
         html , body {
@@ -139,12 +140,14 @@
                 padding: 10px;
                 width: 540px;
                 margin:20px;
+                position: absolute;
 
             }
 
             .container button {
                 text-align: left;
                 margin: 10px;
+                margin-right: 100px;
                 display: grid;
                 justify-content: space-between;
                 border: 2px solid black;
@@ -158,6 +161,12 @@
                 cursor: pointer;
                 position: relative;
                 transition:  0.4s ease-in-out, color 0.4s ease-in-out;
+                
+            }
+
+            button#sort {
+                position: absolute;
+                left: 400px;
             }
             
             /* Using a pseudo-element to create a background transition effect */
@@ -169,6 +178,7 @@
                 z-index: -1;
                 transition: clip-path 0.4s ease-in-out;
                 clip-path: circle(0%); /* Start with a fully visible circle */
+               
             }
            
             .container button:hover {
@@ -207,6 +217,7 @@
                 border-radius: 10px;
                  background: none;
                 width: 100px ;
+                cursor: pointer;
 
             }
  
@@ -218,10 +229,128 @@
             }
             
             
+            .search{
+                position: relative;
+                width: 60px;
+                height: 60px;
+                background: white;
+                border-radius: 60px;
+                transition: 0.5s;
+                box-shadow: 0 0 0 5px white;
+                overflow: hidden;
+
+            }
+
+            .search.active{
+                width: 360px;
+            }
+            .search .icon{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background: white;
+                border-radius: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                cursor: pointer;
+                
+            }
+            .search .icon::before{
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border:3px solid blue;
+                border-radius: 50%;
+                transform: translate(-4px,-4px) ;
+
+
+            }
+            .search .icon::after{
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 12px;
+                background:  black;
+                border-radius: 50%;
+                transform: translate(6px,6px) rotate(315deg);
+
+            }
+            
+            .search .input{
+                position: relative;
+                width: 300px;
+                height: 60px ;
+                left: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .search .input input{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                font-size: 18px;
+                padding: 10px 0;
+            }
+
+
+            .clear{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                right: 15px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .clear::before{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 15px;
+                background:#999;
+                transform: rotate(45deg) ;
+            }
+
+            .clear::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 15px;
+                background:#999;
+                transform: rotate(315deg) ;
+            }
+
+
             
             
-            
-            
+
+
+
+
+
+
+
+
+
+
+
+
     
             
         </style>
@@ -273,7 +402,16 @@
         <div>
             <p>Available  Projects</p>
         </div>
-          <div> <button id = "sort" class="sortbtn"> Sort</button></div>
+          <div> <button id = "sort" class="sortbtn"> Sort</button>
+            <form class="search" autocomplete="off">
+        <div class="icon"></div>
+        <div class="input">
+            <input type="text" id="mysearch" placeholder="Search ...">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = '' "></span>
+            </form>
+        </div>
+      
           <ol id = "sheetNamesContainer" class="container">
           </ol>
        </div>
@@ -284,6 +422,60 @@
     <script src="https://apis.google.com/js/api.js"></script>
 
     <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var icon = document.querySelector('.icon')
+    var search = document.querySelector('.search')
+    icon.onclick = function(){
+        search.classList.toggle('active')
+    }
+
+
+
+
         gapi.load('client', initGoogleSheetsAPI);
 
         function initGoogleSheetsAPI() {
@@ -329,10 +521,11 @@
                         var linkElement = document.createElement('a');
         
                         linkElement.href = sheetUrl;
+                        
         
                         sheetElement.appendChild(linkElement);
                         container.appendChild(sheetElement);
-                        console.log (linkElement)
+                        console.log (sheetTitle)
         
                         // Fetch and display start and end dates
                         try {
