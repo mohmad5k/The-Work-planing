@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="strt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
     <style>
         html , body {
             height: 100%;
@@ -37,8 +41,7 @@
             
             header{
                 background-color: black;
-                padding: 2rem 10px;
-            
+                padding: 2rem 10px;            
             }
             
             
@@ -148,7 +151,7 @@
                 border-radius: 10px;
                 color: black;
                 padding: 10px;
-                width: 400px;
+                width: 500px;
                 background: none;
                 font-size: 18px;
                 letter-spacing: 1px;
@@ -209,7 +212,9 @@
  
             .containerB p {
                 text-align: center;
-                font-size: larger;
+                font-size: 30px;
+                font-family: 'ADLaM Display', cursive;
+                text-decoration:dashed underline ;
             }
             
             
@@ -217,51 +222,53 @@
             
             
             
-         
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <h1 class = "logo">TSA Work Planning</h1>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Views</a>
-                    <ul class="submenu">
-                        <li><a href="#">Work plan View</a></li>
-                        <li> <a href="/The-Work-planing/The-Gantt.html">Resource Histogram</a></li>
-                        <li><a href="#">Sales plan View</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Work PLanning Data</a> 
-                    <ul class="submenu">
-                       <li><a href="/The-Work-planing/The-Projects-View.html">Project Description</a></li>
-                       <li> <a href="#">Estimate Hours</a></li>
-                       <li><a href="#">Project Data Entry</a></li>
-                       <li><a href="#">Resource Allocation</a></li>
-                   </ul>
-                </li>
-                <li><a href="#">User's Data Entry</a>
-                    <ul class="submenu">
-                           <li><a href="#">Work plan View</a></li>
-                           <li><a href="#">Project Progress</a></li>
-                           <li><a href="#">User Availability</a></li>
+    
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class = "logo">TSA Work Planning</h1>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Views</a>
+                        <ul class="submenu">
+                            <li><a href="#">Work plan View</a></li>
+                            <li> <a href="/The-Work-planing/The-Gantt.html">Resource Histogram</a></li>
+                            <li><a href="#">Sales plan View</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Work PLanning Data</a> 
+                        <ul class="submenu">
+                           <li><a href="/The-Work-planing/The-Projects-View.html">Project Description</a></li>
+                           <li> <a href="#">Estimate Hours</a></li>
+                           <li><a href="#">Project Data Entry</a></li>
+                           <li><a href="#">Resource Allocation</a></li>
                        </ul>
-                </li>
-                <li><a href="#">Admin</a> 
-                    <ul class="submenu">
-                            <li> <a href="#">Access Permissions </a></li>
-                            <li> <a href="#">Role</a></li>
-                            <li> <a href="#">New Feature Popup</a></li>
-                            <li> <a href="#">Change Password</a></li>
-                            <li> <a href="#">Dashbored</a></li>
-                            <li> <a href="#">Logout</a></li>
-                   </ul>
-                </li>
+                    </li>
+                    <li><a href="#">User's Data Entry</a>
+                        <ul class="submenu">
+                               <li><a href="#">Work plan View</a></li>
+                               <li><a href="#">Project Progress</a></li>
+                               <li><a href="#">User Availability</a></li>
+                           </ul>
+                    </li>
+                    <li><a href="#">Admin</a> 
+                        <ul class="submenu">
+                                <li> <a href="#">Access Permissions </a></li>
+                                <li> <a href="#">Role</a></li>
+                                <li> <a href="#">New Feature Popup</a></li>
+                                <li> <a href="#">Change Password</a></li>
+                                <li> <a href="#">Dashbored</a></li>
+                                <li> <a href="#">Logout</a></li>
+                       </ul>
+                    </li>
+    
+                </ul>
+            </nav>
+        </header>
 
-            </ul>
-        </nav>
-    </header>
     <div id = "sheetNamesContainerB" class="containerB">
         <div>
             <p>Available  Projects</p>
@@ -277,67 +284,110 @@
     <script src="https://apis.google.com/js/api.js"></script>
 
     <script>
+        gapi.load('client', initGoogleSheetsAPI);
 
-
-    // Load the Google Sheets API
-    gapi.load('client', initGoogleSheetsAPI);
-
-    function initGoogleSheetsAPI() {
-      gapi.client.init({
-        apiKey: 'AIzaSyC1YBfz6znLEessxTPGSZjIJtM1CRAPZ24',
-        discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-      }).then(fetchSheetNames).catch(function(error) {
-        console.log('Error initializing Google Sheets API: ' + error.details);
-      });
-    }
-    function fetchSheetNames() {
-        gapi.client.sheets.spreadsheets.get({
-            spreadsheetId: '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA',
-        }).then(function(response) {
-            var sheets = response.result.sheets;
-            if (sheets && sheets.length > 0) {
-                console.log('Sheet names retrieved:');
-                var container = document.getElementById('sheetNamesContainer'); // Replace with your container element ID
-                for (var i = 0; i < sheets.length; i++) {
-                    var sheetTitle = sheets[i].properties.title;
-                    
-                    // Skip specific sheets by title
-                    if (
-                        sheetTitle === "Employees Report" ||
-                        sheetTitle === "AVAILABLITY SHEET" ||
-                        sheetTitle === "Employees Allocation" ||
-                        sheetTitle === "Reports" ||
-                        sheetTitle === "Tasks' Source" ||
-                        sheetTitle === "Employee Availability"
-                    ) {
-                        continue;
+        function initGoogleSheetsAPI() {
+            gapi.client.init({
+                apiKey: 'AIzaSyC1YBfz6znLEessxTPGSZjIJtM1CRAPZ24',
+                discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+            }).then(fetchSheetNames).catch(function (error) {
+                console.log('Error initializing Google Sheets API: ' + error.details);
+            });
+        }
+        
+        function formatDate(date) {
+            const day = date.getDate();
+            const month = date.toLocaleString('default', { month: 'short' }); // Get abbreviated month name
+            return `${day}-${month}`;
+        }
+        
+        function fetchSheetNames() {
+            gapi.client.sheets.spreadsheets.get({
+                spreadsheetId: '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA',
+            }).then(async function (response) {
+                var sheets = response.result.sheets;
+                if (sheets && sheets.length > 0) {
+                    var container = document.getElementById('sheetNamesContainer'); // Replace with your container element ID
+                    for (var i = 0; i < sheets.length; i++) {
+                        var sheetTitle = sheets[i].properties.title;
+                        var sheetId = sheets[i].properties.sheetId;
+                        var sheetUrl = 'https://docs.google.com/spreadsheets/d/' + response.result.spreadsheetId + '/edit#gid=' + sheetId;
+        
+                        // Skip specific sheets by title
+                        if (
+                            sheetTitle === "Employees Report" ||
+                            sheetTitle === "AVAILABILITY SHEET" ||
+                            sheetTitle === "Employees Allocation" ||
+                            sheetTitle === "Reports" ||
+                            sheetTitle === "Tasks' Source" ||
+                            sheetTitle === "Employee Availability"
+                        ) {
+                            continue;
+                        }
+        
+                        var sheetElement = document.createElement('button');
+                        var linkElement = document.createElement('a');
+        
+                        linkElement.href = sheetUrl;
+        
+                        sheetElement.appendChild(linkElement);
+                        container.appendChild(sheetElement);
+                        console.log (linkElement)
+        
+                        // Fetch and display start and end dates
+                        try {
+                            const dates = await fetchDatesFromSheet(sheetTitle);
+                            linkElement.textContent = sheetTitle +  ` (${formatDate(dates.firstStartDate)} - ${formatDate(dates.lastEndDate)})`;
+                        } catch (error) {
+                            console.log('Error fetching dates from sheet: ', error.details);
+                        }
+        
+                        sheetElement.addEventListener('click', function () {
+                            window.location.href = sheetUrl;
+                        });
                     }
-                    
-                    var sheetElement = document.createElement('button');
-                    var linkElement = document.createElement('a');
-                    var spreadsheetId = '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA';
-                    var sheetId = sheets[i].properties.sheetId;
-                    var sheetUrl = 'https://docs.google.com/spreadsheets/d/' + spreadsheetId + '/edit#gid=' + sheetId;
-
-                    sheetElement.addEventListener('click', function() {
-                        window.location.href = sheetUrl;
-                    });
-            
-                    
-                    linkElement.href = sheetUrl;
-                    linkElement.textContent = sheetTitle;
-
-                    
-                    sheetElement.appendChild(linkElement);
-                    container.appendChild(sheetElement);
+                } else {
+                    console.log('No sheets found in the spreadsheet.');
                 }
-            } else {
-                console.log('No sheets found in the spreadsheet.');
+            }).catch(function (error) {
+                console.log('Error fetching sheet names: ' + error.details);
+            });
+        }
+        
+        async function fetchDatesFromSheet(sheetTitle) {
+            try {
+                const response = await gapi.client.sheets.spreadsheets.values.get({
+                    spreadsheetId: '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA',
+                    range: sheetTitle + '!I2:J', // Adjust the range based on your data location
+                });
+        
+                const values = response.result.values;
+                let firstStartDate = null;
+                let lastEndDate = null;
+        
+                for (let i = 0; i < values.length; i++) {
+                    const startDate = new Date(values[i][0]);
+                    const endDate = new Date(values[i][1]);
+        
+                    if (!isNaN(startDate) && (firstStartDate === null || startDate < firstStartDate)) {
+                        firstStartDate = startDate;
+                    }
+        
+                    if (!isNaN(endDate) && (lastEndDate === null || endDate > lastEndDate)) {
+                        lastEndDate = endDate;
+                    }
+                }
+        
+                return { firstStartDate, lastEndDate };
+            } catch (error) {
+                console.log('Error fetching dates from sheet: ', error.details);
+                throw error; // Propagate the error to the caller
             }
-        }).catch(function(error) {
-            console.log('Error fetching sheet names: ' + error.details);
-        });
-    }
+        }
+        
+
+        
+  
     
     var sortButton = document.getElementById('sort');
     sortButton.addEventListener('click', function() {
