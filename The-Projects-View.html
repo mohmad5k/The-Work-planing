@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planning System</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +13,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
 <link href="path/to/font-awesome/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap" rel="stylesheet">
 
     <style>
         html , body {
@@ -33,7 +37,8 @@
                 line-height: 1.6;
                 background-color: rgb(255, 255, 255);
                 color: 666;
-                font-family: 'Roboto Condensed', sans-serif;
+                font-family: 'Nunito Sans', sans-serif; 
+                font-weight: 600;
                 justify-content: space-around;
                 
             }
@@ -42,15 +47,14 @@
             
             header{
                 background-color: black;
-                padding: 2rem 10px;            
+                padding: 0.5rem 10px;            
             }
             
             
             nav{
-                max-width: 1100px;
+                max-width: 1100px;;
                 margin: 0 auto;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 
             }
@@ -58,66 +62,62 @@
             .logo{
                 font-size: 1.5rem;
                 color: white;
-                font-weight: 700;
+                font-weight: 600;
+                position: relative;
+                
             }
             
-            .menu > li ,.menu > a{
+            .menu1 > li ,.menu1 > a{
                 display: inline-block;
             }
-            
-            .menu li{
+
+            .menu1 li a {
+                right: 30%;
                 position: relative;
             }
             
-            .menu a {
+           
+            
+            .menu1 a {
+               
                 text-decoration: none;
                 color: white;
                 display: block;
                 padding: 10px 1.5rem;
-                transition: background-color .22s ease, color .22s ease;
+                position: relative;
+                
             }
             
-            .menu a:hover{
-                background-color:rgb(152, 239, 152) ;
-                color: black;
-            }
+           
             
             
-            /*submenu level 1 styles*/
+            /*submenu1 level 1 styles*/
             
-            .submenu{
+            .submenu1  {
                 position: absolute;
-                background-color: black;
-                width: 200px;
-                left: 0;
                 display: none;
-            
+
+            }
+                     
+             .submenu1 a{
+                position: relative;
+             background-color: black;
+             
+                
+
             }
             
-            
-            /*show menu on hover*/
-            
-            .menu li:hover> .submenu {
+            .menu1 li:hover > .submenu1 {
                 display: block;
-                animation: slideup .3s ease;
-            
+                animation: slideup 0.3s ease;
+                
             }
+            
             
             
             /*Animation  Keyframes*/
             
-            @keyframes slideup {
-                0%  {
-                    opacity: 0;
-                    transform: translateX(18px);
-                }
-            
-            
-                100% {
-                    opacity: 1;
-                    transform: none;
-                }
-            }
+       
             
             @keyframes slideleft {
                 0%  {
@@ -141,61 +141,32 @@
                 width: 540px;
                 margin:20px;
                 position: absolute;
+                
 
             }
 
             .container button {
                 text-align: left;
                 margin: 10px;
-                margin-right: 100px;
                 display: grid;
                 justify-content: space-between;
                 border: 2px solid black;
                 border-radius: 10px;
                 color: black;
                 padding: 10px;
-                width: 500px;
+                width: auto;
                 background: none;
                 font-size: 18px;
                 letter-spacing: 1px;
                 cursor: pointer;
                 position: relative;
-                transition:  0.4s ease-in-out, color 0.4s ease-in-out;
                 
             }
 
-            button#sort {
-                position: absolute;
-                left: 400px;
-            }
+           
             
             /* Using a pseudo-element to create a background transition effect */
-            .container button::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: black;
-                z-index: -1;
-                transition: clip-path 0.4s ease-in-out;
-                clip-path: circle(0%); /* Start with a fully visible circle */
-               
-            }
            
-            .container button:hover {
-                color: white;
-                background-color: black;
-            }
-            
-            .container button:hover a {
-                font-size: medium;
-                color: white;
-                padding: 2px 1.5rem;
-            }
-            .container button:hover::before {
-                clip-path: circle(100%); /* Hide the circular background on hover */
-            }
-            
-            
                     .container a
                     {
                         
@@ -209,35 +180,50 @@
                     }   
                     
             
-            .containerB .sortbtn{
+            .containerB .sortbtn1{
                 
-                padding: 10px;
-                align-self: flex-end;
+                padding: 5px;
                 font-size:larger;
                 border-radius: 10px;
                  background: none;
-                width: 100px ;
+                width: 60px ;
                 cursor: pointer;
 
+
             }
+
+            button#sort {
+                position: absolute;
+                left: 450px;
+            }
+
+            h1#logoo{
+                position: relative;
+                padding-left:35px ;
+                right: 30%;                  
+            }
+          
+          
  
             .containerB p {
                 text-align: center;
-                font-size: 30px;
-                font-family: 'ADLaM Display', cursive;
-                text-decoration:dashed underline ;
-            }
+                font-size: 25px;
+                font-family: 'Nunito Sans', sans-serif;  
+           }
             
             
             .search{
                 position: relative;
                 width: 60px;
-                height: 60px;
+                height: 35px;
                 background: white;
-                border-radius: 60px;
+                border-radius: 30px;
                 transition: 0.5s;
-                box-shadow: 0 0 0 5px white;
+                box-shadow: 0 0 0 2px gray;
                 overflow: hidden;
+                
+                
+                
 
             }
 
@@ -249,7 +235,7 @@
                 top: 0;
                 left: 0;
                 width: 60px;
-                height: 60px;
+                height: 35px;
                 background: white;
                 border-radius: 60px;
                 display: flex;
@@ -263,7 +249,7 @@
                 content: "";
                 position: absolute;
                 width: 15px;
-                height: 15px;
+                height: 13px;
                 border:3px solid blue;
                 border-radius: 50%;
                 transform: translate(-4px,-4px) ;
@@ -284,7 +270,7 @@
             .search .input{
                 position: relative;
                 width: 300px;
-                height: 60px ;
+                height: 35px ;
                 left: 60px;
                 display: flex;
                 justify-content: center;
@@ -342,6 +328,67 @@
 
 
 
+       /* ... Your existing styles ... */
+
+/* Adjustments for responsive design */
+@media (max-width: 1200px) {
+    
+
+    /* Adjust navigation styles as needed for medium screens */
+
+    .logo{
+        position: relative;
+        left: 0%;
+    }
+       
+
+    button#sort {
+        position: sticky;
+    }
+   
+
+    .menu1 li a {
+        position: relative;
+        left: 50%;
+
+    }
+   
+}
+
+
+
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    
+
+    /* Adjust navigation styles as needed for medium screens */
+.logo{
+    position: relative;
+    left: 0%;
+}
+   
+
+    button#sort {
+        position: sticky;
+    }
+    .search {
+        height: 30px;
+        margin-top: 10px;
+         /* Full width search box */
+    }
+
+    .menu1 li a {
+        position: relative;
+        left: 50%;
+
+    }
+
+}
+
+/* Additional media queries for even smaller screens if needed */
+/* For example: @media (max-width: 480px) { ... } */
 
 
 
@@ -358,18 +405,18 @@
     <body>
         <header>
             <nav>
-                <h1 class = "logo">TSA Work Planning</h1>
-                <ul class="menu">
+                <h1 class = "logo" id="logoo">TSA Work Planning</h1>
+                <ul class="menu1">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Views</a>
-                        <ul class="submenu">
+                        <ul class="submenu1">
                             <li><a href="#">Work plan View</a></li>
                             <li> <a href="/The-Work-planing/The-Gantt.html">Resource Histogram</a></li>
                             <li><a href="#">Sales plan View</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Work PLanning Data</a> 
-                        <ul class="submenu">
+                        <ul class="submenu1">
                            <li><a href="/The-Work-planing/The-Projects-View.html">Project Description</a></li>
                            <li> <a href="#">Estimate Hours</a></li>
                            <li><a href="#">Project Data Entry</a></li>
@@ -377,14 +424,14 @@
                        </ul>
                     </li>
                     <li><a href="#">User's Data Entry</a>
-                        <ul class="submenu">
+                        <ul class="submenu1">
                                <li><a href="#">Work plan View</a></li>
                                <li><a href="#">Project Progress</a></li>
                                <li><a href="#">User Availability</a></li>
                            </ul>
                     </li>
                     <li><a href="#">Admin</a> 
-                        <ul class="submenu">
+                        <ul class="submenu1">
                                 <li> <a href="#">Access Permissions </a></li>
                                 <li> <a href="#">Role</a></li>
                                 <li> <a href="#">New Feature Popup</a></li>
@@ -401,20 +448,25 @@
     <div id = "sheetNamesContainerB" class="containerB">
         <div>
             <p>Available  Projects</p>
+        </div >   
+        <div><button id="sort" class="sortbtn1">Sort</button></div>
+        <div class="search" autocomplete="off">
+            <div class="icon"></div>
+            <div class="input">
+                <input type="text" id="input" placeholder="Search ...">
+                <ul class="list"></ul>
+                
+            </div><span class="clear"></span>
         </div>
-          <div> <button id = "sort" class="sortbtn"> Sort</button>
-            <form class="search" autocomplete="off">
-        <div class="icon"></div>
-        <div class="input">
-            <input type="text" id="mysearch" placeholder="Search ...">
-        </div>
-        <span class="clear" onclick="document.getElementById('mysearch').value = '' "></span>
-            </form>
-        </div>
-      
-          <ol id = "sheetNamesContainer" class="container">
+        <div class="container">
+       <ol id = "sheetNamesContainer" class="container">
           </ol>
-       </div>
+    </div>
+          
+       </div> </div>
+
+
+       
 
 
 
@@ -427,7 +479,8 @@
 
 
 
-
+      
+        
 
 
 
@@ -475,7 +528,6 @@
 
 
 
-
         gapi.load('client', initGoogleSheetsAPI);
 
         function initGoogleSheetsAPI() {
@@ -494,6 +546,42 @@
         }
         
         function fetchSheetNames() {
+            sheetTitles = []
+            console.log(sheetTitles)
+
+
+
+    
+            var input =document.getElementById("input")
+            input.addEventListener("keyup",(e) =>{
+                for (var i of sheetTitles){
+                    if(
+                        i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+                        input.value != ""
+                    ){
+                        var listItem = document.createElement("li")
+                        listItem.classList.add("list-items");
+                        listItem.style.cursor="pointer";
+                        //listItem.setAttribute("onclick","displayNames('" +i+ "')");
+
+                        var word = "<b>" + i.substr(input.value.length) + "<b>"
+                        word += i.substr(input.value.length)
+                       console.log (word)
+                       
+
+                    }
+                }
+                     
+   }) 
+
+            function displayNames(value){
+                input.value = value
+            }
+
+        
+
+
+
             gapi.client.sheets.spreadsheets.get({
                 spreadsheetId: '1BQyLzI0v6RwX1cZ_u-nsli9KPIgJNFCH62t3kMeJuhA',
             }).then(async function (response) {
@@ -504,7 +592,7 @@
                         var sheetTitle = sheets[i].properties.title;
                         var sheetId = sheets[i].properties.sheetId;
                         var sheetUrl = 'https://docs.google.com/spreadsheets/d/' + response.result.spreadsheetId + '/edit#gid=' + sheetId;
-        
+                        
                         // Skip specific sheets by title
                         if (
                             sheetTitle === "Employees Report" ||
@@ -516,6 +604,7 @@
                         ) {
                             continue;
                         }
+                        sheetTitles.push(sheetTitle)
         
                         var sheetElement = document.createElement('button');
                         var linkElement = document.createElement('a');
@@ -525,12 +614,11 @@
         
                         sheetElement.appendChild(linkElement);
                         container.appendChild(sheetElement);
-                        console.log (sheetTitle)
         
                         // Fetch and display start and end dates
                         try {
                             const dates = await fetchDatesFromSheet(sheetTitle);
-                            linkElement.textContent = sheetTitle +  ` (${formatDate(dates.firstStartDate)} - ${formatDate(dates.lastEndDate)})`;
+                            linkElement.textContent = sheetTitle/* +  ` (${formatDate(dates.firstStartDate)} - ${formatDate(dates.lastEndDate)})`;*/
                         } catch (error) {
                             console.log('Error fetching dates from sheet: ', error.details);
                         }
