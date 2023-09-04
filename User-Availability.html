@@ -19,23 +19,23 @@
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <style>
-         *
-         {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         }
+        *
+        {
+        margin: 0;
+        padding: 0;
+        }
+        
          .header{
          position: relative;
          top: 0;
-         left: 0;
-         width: 100%;
+         width: auto;
          padding: 10px 40px ;
          padding-right: 400px;
          background-color: black;
          display: flex;
          justify-content: space-between;
          z-index: 100;
+         
          }
          .logo{
          color: white;
@@ -45,11 +45,12 @@
          margin-right: 30px;
          font-size: 1.5rem;
          }
-         .navbar a {
+         .header a {
          font-size: 16px;
          color: black;
          text-decoration: none;
          font-weight: 400;
+         
          }
          ul{
          list-style: none;
@@ -80,8 +81,11 @@
          width: auto;
          z-index: 100;
 display: none;
+font-family: Arial, Helvetica, sans-serif;
+
          }
 
+       
         
          .submenu1 a {
          color: gray;
@@ -96,24 +100,22 @@ display: none;
          animation: slideup .3s ease;
          }
          .container{
-         background-color: rgba(192, 192, 192, 0.626);
          width: 100%;
-         height: 560px;
+         height: 650px;
          margin-top: 20px;
          font-family: Arial, Helvetica, sans-serif;
+         background: gray;
 
          }
-         .container{
-         background: white;
-         height: 550px;
-         }
+       
          .containerD{
-         width: 90%;
-         background-color: lightgray;
-         position: relative;
-         left: 60px;
-         height: 560px;
-         }
+          width: 90%;
+          background-color: lightgray;
+          position: relative;
+          left: 60px;
+          height: 560px;
+          top: 40px;
+          }
          .containerD .dates{
          position: absolute;
          left: 950px;
@@ -121,13 +123,47 @@ display: none;
          margin-top: 11px;
          }
          .date-container{
-         position: absolute;
-         left: 1200px;
-         margin-top: 9px;
-         cursor: pointer;
-         font-family: Arial, Helvetica, sans-serif;
-
+          text-align: center;
+          width: 160px;
+          height: 30px;
+          position: absolute;
+          bottom: 520px;
+          left: 1200px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-family: Arial, Helvetica, sans-serif;
          }
+
+
+         .savebtn{
+          color:black;
+          margin-top: 500px;
+          margin-left: 1310px;
+          padding: 8px;
+          border-radius: 5px;
+          box-shadow: none;
+          cursor: pointer;
+          position: relative;
+
+        }
+        
+        
+        .Duplicatebtn{
+          color:black;
+          margin-left: 1220px;
+          padding: 8px;
+          border-radius: 5px;
+          box-shadow: none;
+          cursor: pointer;
+          bottom: 35px;
+position: relative;
+        
+        }
+
+
+       
+
+
          .datepicker{
          text-align: center;
          width: 160px;
@@ -144,16 +180,24 @@ display: none;
          margin-top:  80px;
          color: black;
          }
+
+         .breakT{
+            position: absolute;
+            left: 510px;
+            margin-top:  80px;
+            color: black;
+
+         }
          .containerD .endT{
          position: absolute;
-         left: 500px;
+         left: 700px;
          color: black;
          margin-top: 80px;
          }
          .containerD .date{
          position: absolute;
          margin-top:  80px;
-         left: 30px;
+         left: 115px;
          }
          .endTime:hover{
          cursor: pointer;
@@ -161,44 +205,57 @@ display: none;
          .date-container .date-icon{
          position: absolute;
          right: 135px;
-         margin-top: 5px;
+         top: 7px;
          }
          .total{
          position: absolute;
-         left: 807px;
+         left: 900px;
          color: black;
-         margin-top: 80px;             
+         margin-top: 80px;  
          }
          .containerD .StartTime1{
          position: absolute;
          left: 320px;
          margin-top: 130px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT1{
+            position: absolute;
+            left: 510px;
+            margin-top: 130px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
          .containerD .endTime1{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 130px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD1{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 130px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
@@ -207,31 +264,44 @@ display: none;
          left: 320px;
          margin-top: 180px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT2{
+            position: absolute;
+            left: 510px;
+            margin-top: 180px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
          .containerD .endTime2{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 180px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD2{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 180px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
@@ -240,31 +310,44 @@ display: none;
          left: 320px;
          margin-top: 230px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT3{
+            position: absolute;
+            left: 510px;
+            margin-top: 230px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
          .containerD .endTime3{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 230px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD3{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 230px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
@@ -273,31 +356,44 @@ display: none;
          left: 320px;
          margin-top: 280px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT4{
+            position: absolute;
+            left: 510px;
+            margin-top: 280px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
          .containerD .endTime4{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 280px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD4{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 280px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          } 
@@ -306,31 +402,44 @@ display: none;
          left: 320px;
          margin-top: 330px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT5{
+            position: absolute;
+            left: 510px;
+            margin-top: 330px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
          .containerD .endTime5{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 330px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD5{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 330px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
@@ -339,31 +448,45 @@ display: none;
          left: 320px;
          margin-top: 380px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT6{
+            position: absolute;
+            left: 510px;
+            margin-top: 380px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+
          .containerD .endTime6{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 380px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD6{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 380px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          } 
@@ -372,31 +495,45 @@ display: none;
          left: 320px;
          margin-top: 430px;
          color: black;
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
+
+         .breakT7{
+            position: absolute;
+            left: 510px;
+            margin-top: 430px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+
          .containerD .endTime7{
          position: absolute;
-         left: 500px;
+         left: 700px;
          margin-top: 430px;
          color: black; 
-         width: 150px;
+         width: auto;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD7{
-         position: absolute;
-         left: 800px;
+                position: absolute;
+         left: 900px;
          margin-top: 430px;
          color: black; 
          width: 50px;
          padding: 5px;
-         border: 1px solid #ccc;
+              border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          } 
@@ -404,7 +541,7 @@ display: none;
          position: absolute;
          margin-top:  115px;
          justify-content: space-between;
-         left: 30px;    
+         left: 60px;    
          }
          .days div{
          padding: 16px;
@@ -414,12 +551,115 @@ display: none;
          }
 
 
+         .day1{
+          position: absolute;
+          left: 50px;
+          margin-top: 15px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day2{
+          position: absolute;
+          left: 50px;
+          margin-top: 65px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day3{
+          position: absolute;
+          left: 50px;
+          margin-top: 115px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day4{
+          position: absolute;
+          left: 50px;
+          margin-top: 165px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day5{
+          position: absolute;
+          left: 50px;
+          margin-top: 215px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day6{
+          position: absolute;
+          left: 50px;
+          margin-top: 265px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .day7{
+          position: absolute;
+          left: 50px;
+          margin-top: 315px;
+          color: black; 
+          width: 50px;
+          padding: 5px;
+          border: none;
+          background-color: lightgray;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+     
+
+
+     
+
+
+
+         
+
+
+
+
+
 
          @media (max-width: 1500px) {
          /* Adjust navigation styles as needed for medium screens */
 
 .header{
     padding-right: 0px;
+    padding: 10px 50px ;
+    padding-right: 200px;
+    border: none;
+    right: 100px;
+    width: 110%;
+
 
 }
 
@@ -428,26 +668,76 @@ display: none;
     padding-right: 200px;
 }
 
-.innercont{
-    width: 500px;
+
+.container{
+  width: 130%;
+  height: 650px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: gray;
+
+  }
+
+  .containerD{
+   width: 92%;
+   background-color: lightgray;
+   position: relative;
+   left: 30px;
+   height: 560px;
+   top: 40px;
+   }
+
+  .innercont {
+    height: 500px;
+    width: 20%;
+
 }
-         .date-container{
-            position:static;
-            left: 1200px;
-        }
+
+
+ 
+
+
+    .date-container{
+      text-align: center;
+      width: 160px;
+      height: 30px;
+      position: absolute;
+      bottom: 520px;
+      left: 0px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+     }
+
+    .datepicker{
+      text-align: center;
+      width: 160px;
+      height: 30px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+    
+      position: relative;
+      left: 12px;
+
+
+      }
          .date-container .date-icon{
-         position:relative;
-         right: 150px;
+         position: absolute;
+         right: 125px;
+         top: 7px;
          }
          .savebtn{
-            position: sticky;
-            right: 20px;
+            position: relative;
+            right: 1200px;
+            top: 5.5px;
             
          }
 
          .Duplicatebtn{
-            position: sticky;
-            right: 80px;
+            position: relative;
+            right: 1200px;
+            bottom: 30px;
 
 
          }
@@ -455,13 +745,24 @@ display: none;
 
          .containerD .startT{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top:  80px;
             color: black;
             }
+
+
+               .breakT{
+            position: absolute;
+            left: 380px;
+            margin-top:  80px;
+            color: black;
+
+         }
+
+
             .containerD .endT{
             position: absolute;
-            left: 400px;
+            left: 530px;
             color: black;
             margin-top: 80px;
             }
@@ -471,16 +772,20 @@ display: none;
             left: 30px;
             }
 
-
+            
          .total{
             position: absolute;
-            left: 560px;
+            left: 760px;
             color: black;
-            margin-top: 80px;             
+            margin-top: 80px; 
             }
+
+
+
+
             .containerD .StartTime1{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 130px;
             color: black;
             width: 100px;
@@ -489,9 +794,27 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+            
+         .breakT1{
+            position: absolute;
+            left: 380px;
+            margin-top: 130px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+
+
             .containerD .endTime1{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 130px;
             color: black; 
             width: 100px;
@@ -500,20 +823,27 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+        
+
             .totalD1{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 130px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+
             .containerD .StartTime2{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 180px;
             color: black;
             width: 100px;
@@ -522,9 +852,27 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+            
+         .breakT2{
+            position: absolute;
+            left: 380px;
+            margin-top: 180px;
+            color: black;
+            width: auto;
+            padding: 5px;
+              border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+
+
+
             .containerD .endTime2{
             position: absolute;
-            left: 400px;
+            left: 530px;
             margin-top: 180px;
             color: black; 
             width: 100px;
@@ -534,19 +882,21 @@ display: none;
             font-size: 14px;
             }
             .totalD2{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 180px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
+
             }
             .containerD .StartTime3{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 230px;
             color: black;
             width: 100px;
@@ -555,9 +905,30 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+            .breakT3{
+              position: absolute;
+              left: 380px;
+              margin-top: 230px;
+              color: black;
+              width: auto;
+              padding: 5px;
+                border: 1px solid black;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
+
+
+
+
+
+
+
             .containerD .endTime3{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 230px;
             color: black; 
             width: 100px;
@@ -567,19 +938,20 @@ display: none;
             font-size: 14px;
             }
             .totalD3{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 230px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             }
             .containerD .StartTime4{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 280px;
             color: black;
             width: 100px;
@@ -588,9 +960,24 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+            .breakT4{
+              position: absolute;
+              left: 380px;
+              margin-top: 280px;
+              color: black;
+              width: auto;
+              padding: 5px;
+                border: 1px solid black;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
             .containerD .endTime4{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 280px;
             color: black; 
             width: 100px;
@@ -600,19 +987,20 @@ display: none;
             font-size: 14px;
             }
             .totalD4{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 280px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             } 
             .containerD .StartTime5{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 330px;
             color: black;
             width: 100px;
@@ -621,9 +1009,32 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+
+
+            .breakT5{
+              position: absolute;
+              left: 380px;
+              margin-top: 330px;
+              color: black;
+              width: auto;
+              padding: 5px;
+                border: 1px solid black;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
+
+
+
+
+
+
             .containerD .endTime5{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 330px;
             color: black; 
             width: 100px;
@@ -633,19 +1044,20 @@ display: none;
             font-size: 14px;
             }
             .totalD5{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 330px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             }
             .containerD .StartTime6{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 380px;
             color: black;
             width: 100px;
@@ -654,9 +1066,34 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+
+
+
+            .breakT6{
+              position: absolute;
+              left: 380px;
+              margin-top: 380px;
+              color: black;
+              width: auto;
+              padding: 5px;
+                border: 1px solid black;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
+
+
+
+
+
+
+
             .containerD .endTime6{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 380px;
             color: black; 
             width: 100px;
@@ -666,19 +1103,20 @@ display: none;
             font-size: 14px;
             }
             .totalD6{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 380px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             } 
             .containerD .StartTime7{
             position: absolute;
-            left: 220px;
+            left: 240px;
             margin-top: 430px;
             color: black;
             width: 100px;
@@ -687,9 +1125,33 @@ display: none;
             border-radius: 5px;
             font-size: 14px;
             }
+
+
+
+
+            .breakT7{
+              position: absolute;
+              left: 380px;
+              margin-top: 430px;
+              color: black;
+              width: auto;
+              padding: 5px;
+                border: 1px solid black;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
+
+
+
+
+
+
+
             .containerD .endTime7{
             position: absolute;
-            left: 400px;
+                        left: 530px;
+
             margin-top: 430px;
             color: black; 
             width: 100px;
@@ -699,13 +1161,14 @@ display: none;
             font-size: 14px;
             }
             .totalD7{
-            position: absolute;
-            left: 560px;
+          
+          position: absolute;
+            left: 760px;
             margin-top: 430px;
             color: black; 
             width: 50px;
             padding: 5px;
-            border: 1px solid #ccc;
+              border: 1px solid black;
             border-radius: 5px;
             font-size: 14px;
             } 
@@ -713,10 +1176,94 @@ display: none;
             position: absolute;
             margin-top:  115px;
             justify-content: space-between;
-            left: 30px;    
+            left: 0px;    
             }
-            .days div{
-            padding: 16px;
+            
+
+
+            .day1{
+              position: absolute;
+              left: 40px;
+              margin-top: 15px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day2{
+              position: absolute;
+              left: 40px;
+              margin-top: 65px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day3{
+              position: absolute;
+              left: 40px;
+              margin-top: 115px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day4{
+              position: absolute;
+              left: 40px;
+              margin-top: 165px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day5{
+              position: absolute;
+              left: 40px;
+              margin-top: 215px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day6{
+              position: absolute;
+              left: 40px;
+              margin-top: 265px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
+            }
+            .day7{
+              position: absolute;
+              left: 40px;
+              margin-top: 315px;
+              color: black; 
+              width: 50px;
+              padding: 5px;
+              border: none;
+              background-color: lightgray;
+              border-radius: 5px;
+              font-size: 14px;
             }
          
 
@@ -726,41 +1273,16 @@ display: none;
 
          
 
-.savebtn{
-    position: absolute;
-    color:black;
-    margin-top: 500px;
-    margin-left: 1310px;
-    padding: 8px;
-    border-radius: 5px;
-    box-shadow: none;
-    cursor: pointer;
-}
 
 
-.Duplicatebtn{
-    position: absolute;
-    color:black;
-    margin-top:500px;
-    margin-left: 1220px;
-    padding: 8px;
-    border-radius: 5px;
-    box-shadow: none;
-    cursor: pointer;
-
-}
-.innercont{
-    height: 500px;
-    width: 1100px;
-    margin-left: 30px;
-    margin-top: 20px;
-    position: absolute;
-
-}
-
-
-
-
+         .innercont{
+          height: 500px;
+          width: 1100px;
+          margin-left: 30px;
+          margin-top: 20px;
+          position: absolute;
+        
+        }
 
 
 
@@ -771,7 +1293,7 @@ display: none;
    <body>
       <header class="header">
          </a>
-         <nav class="navbar">
+         
             <ul class="menu1">
                <li><a href="/The-Work-planing/index.html">Home</a> </li>
                <li>
@@ -796,7 +1318,7 @@ display: none;
                   <ul class="submenu1">
                      <li><a href="#">DL Input Hours</a></li>
                      <li><a href="#">Project Progress</a></li>
-                     <li><a href="/The-Work-planing/User-Availability.html" class="done">User Availability</a></li>
+                     <li><a href="https://mohmad5k.github.io/The-Work-planing/User-Availability.html" class="done">User Availability</a></li>
                   </ul>
                </li>
                <li>
@@ -811,50 +1333,85 @@ display: none;
                   </ul>
                </li>
             </ul>
-         </nav>
       </header>
       <body>
+
+
+        <script type="text/javascript">
+          function showError(errorMessage, dates) {
+          alert(errorMessage + " Dates: " + dates.join(', '));
+      }
+      
+          </script>
+        <script>
+          
+          
+        </script>
+        <form action="save.php"method="post">
          <div class="container">
             <div class="containerD">
                 <div class="innercont">
                <p class="startT">From</p>
+               <p class="breakT">Break</p>
                <p class="endT">To</p>
                <p class="total">Total</p>
-               <input type="time"  id="Start1" class="StartTime1">
-               <input type="time"  id="end1" class="endTime1">
-               <input type="number"  id="total1" class="totalD1" readonly >
-               <input type="time"  id="Start2" class="StartTime2">
-               <input type="number"  id="total2" class="totalD2" readonly >
-               <input type="time"  id="end2" class="endTime2">
-               <input type="time"  id="Start3" class="StartTime3">
-               <input type="number"  id="total3" class="totalD3" readonly >
-               <input type="time"  id="end3" class="endTime3">
-               <input type="time"  id="Start4" class="StartTime4">
-               <input type="number"  id="total4" class="totalD4" readonly >
-               <input type="time"  id="end4" class="endTime4">
-               <input type="time"  id="Start5" class="StartTime5">
-               <input type="number"  id="total5" class="totalD5" readonly >
-               <input type="time"  id="end5" class="endTime5">
-               <input type="time"  id="Start6" class="StartTime6">
-               <input type="number"  id="total6" class="totalD6" readonly >
-               <input type="time"  id="end6" class="endTime6">
-               <input type="time"  id="Start7" class="StartTime7">
-               <input type="number"  id="total7" class="totalD7" readonly >
-               <input type="time"  id="end7" class="endTime7">
-               <div class="days">
+               <input type="time"  id="Start1" class="StartTime1" name="STtime1">
+               <input type="time"  id="break1" class="breakT1" name="BRtime1">
+
+               <input type="time"  id="end1" class="endTime1" name="ENDtime1">
+               <input type="number"  id="total1" class="totalD1"   name="total1" readonly >
+               <input type="time"  id="Start2" class="StartTime2" name="STtime2">
+               <input type="time"  id="break2" class="breakT2" name="BRtime2">
+
+               <input type="number"  id="total2" class="totalD2" name="total2" readonly >
+               <input type="time"  id="end2" class="endTime2" name="ENDtime2">
+               <input type="time"  id="Start3" class="StartTime3" name="STtime3">
+               <input type="time"  id="break3" class="breakT3" name="BRtime3">
+
+               <input type="number"  id="total3" class="totalD3" name="total3" readonly >
+               <input type="time"  id="end3" class="endTime3" name="ENDtime3">
+               <input type="time"  id="Start4" class="StartTime4" name="STtime4">
+               <input type="time"  id="break4" class="breakT4" name="BRtime4">
+
+               <input type="number"  id="total4" class="totalD4" name="total4" readonly >
+               <input type="time"  id="end4" class="endTime4" name="ENDtime4">
+               <input type="time"  id="Start5" class="StartTime5" name="STtime5">
+               <input type="time"  id="break5" class="breakT5" name="BRtime5">
+
+               <input type="number"  id="total5" class="totalD5" name="total5" readonly >
+               <input type="time"  id="end5" class="endTime5" name="ENDtime5">
+               <input type="time"  id="Start6" class="StartTime6" name="STtime6">
+               <input type="time"  id="break6" class="breakT6" name="BRtime6">
+
+               <input type="number"  id="total6" class="totalD6" name="total6" readonly >
+               <input type="time"  id="end6" class="endTime6" name="ENDtime6">
+               <input type="time"  id="Start7" class="StartTime7" name="STtime7">
+               <input type="time"  id="break7" class="breakT7" name="BRtime7">
+
+               <input type="number"  id="total7" class="totalD7" name="total7" readonly >
+               <input type="time"  id="end7" class="endTime7" name="ENDtime7">
+
+
+
+
+
+
+
+
+               <div class="days" name="days">
                </div>
                <p class="date">
                   Date
                </p></div>
 
-               <div>
-                <button type="submit" class="savebtn">Save</button>
-               </div>
+               
+                <input type="submit" name="savebtn" id="submitButton"  class="savebtn" value="save"></button>
+            
 
-               <div>
+               
                 <button type="button" class="Duplicatebtn"> Duplicate</button>
 
-               </div>
+               
                <div class="col-md-6">
                   <div class="date-container">
                      <input id="date" type="text" class="datepicker" placeholder="Select a date" readonly />
@@ -864,96 +1421,157 @@ display: none;
                </div>
             </div>
          </div>
+        </form>
          <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+         
          <script>
-            $(document).ready(function() {
-                $(".datepicker").datepicker({
-                  dateFormat: "D d -M y",
-                  todayHighlight: true,
-                  autoclose: true,
-                  defaultDate: "+0w", // Set default to the current week
-                  onSelect: function(dateText) {
+          
+          
+         
+          $(document).ready(function() {
+            // Initialize the datepicker
+            $(".datepicker").datepicker({
+                dateFormat: "D d -M y",
+                todayHighlight: true,
+                autoclose: true,
+                defaultDate: "+0w", // Set default to the current week
+                onSelect: function(dateText) {
                     var selectedDate = $.datepicker.parseDate("D d -M y", dateText);
                     displayWeekData(selectedDate);
+                }
+            });
+        
+            // Set default value to the current week
+            const today = new Date();
+            const startOfWeek = new Date(today);
+            startOfWeek.setDate(today.getDate() - today.getDay()); // Start from Sunday
+            $(".datepicker").datepicker("setDate", startOfWeek);
+            displayWeekData(startOfWeek);
+        });
+        
+        function getWeekDay(date) {
+            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayIndex = date.getDay();
+            return weekDays[dayIndex];
+        }
+        
+        function displayWeekData(selectedDate) {
+            const daysInWeek = 7;
+            const startDate = new Date(selectedDate);
+            startDate.setDate(selectedDate.getDate() - selectedDate.getDay()); // Start from Sunday
+        
+            // Clear previous data
+            $(".days").empty(); // Remove all child elements
+        
+            for (let i = 0; i < daysInWeek; i++) {
+                const currentDate = new Date(startDate);
+                currentDate.setDate(startDate.getDate() + i);
+                const weekDay = getWeekDay(currentDate);
+        
+                const formattedDate = currentDate.toLocaleDateString("en-US", { weekday: "short", day: "numeric" });
+        
+                // Create and append day elements
+                const dayElement = $("<input>").addClass("day" + (i + 1)).attr("name", "day" + (i + 1)).val(formattedDate);
+                $(".days").append(dayElement);
+            }
+        }
+        
+        // Add a click event handler for the Save button
+        $("#dateForm").submit(function(event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Get the selected date from the datepicker input
+          const selectedDate = $(".datepicker").datepicker("getDate");
+
+          // Check if a date is selected
+          if (selectedDate) {
+              // Convert the selected date to a string in your desired format
+              const formattedDate = $.datepicker.formatDate("D d -M y", selectedDate);
+
+              // Set the formatted date as the value of the hidden input
+              $('input[name="selectDate"]').val(formattedDate);
+
+              // Submit the form to save the date using PHP
+              $.ajax({
+                  type: 'POST',
+                  url: 'save.php', // Replace with the actual PHP script
+                  data: $("#dateForm").serialize(),
+                  success: function(response) {
+                      console.log('Date saved successfully');
+                      // You can perform additional actions here if needed
+                  },
+                  error: function(error) {
+                      console.error('Error saving date:', error);
+                      // Handle the error appropriately
                   }
-                });
-            
-                // Set default value to the current week
-                const today = new Date();
-                const startOfWeek = new Date(today);
-                startOfWeek.setDate(today.getDate() - today.getDay()); // Start from Sunday
-                $(".datepicker").datepicker("setDate", startOfWeek);
-                displayWeekData(startOfWeek);
               });
-            
-              function getWeekDay(date) {
-                const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                const dayIndex = date.getDay();
-                return weekDays[dayIndex];
-              }
-            
-              function displayWeekData(selectedDate) {
-                const daysInWeek = 7;
-                const startDate = new Date(selectedDate);
-                startDate.setDate(selectedDate.getDate() - selectedDate.getDay()); // Start from Sunday
-            
-                $(".day").remove(); // Clear previous data
-                
-                for (let i = 0; i < daysInWeek; i++) {
-                  const currentDate = new Date(startDate);
-                  currentDate.setDate(startDate.getDate() + i);
-                  const weekDay = getWeekDay(currentDate);
-                  
-                  const formattedDate = currentDate.toLocaleDateString("en-US", { weekday: "short", day: "numeric" });
-                  
-                  const dayElement = $("<div>").addClass("day");
-                  dayElement.text(` ${formattedDate}`);
-                  
-                  $(".days").append(dayElement);
-                }
-              }
-            
-            
+          } else {
+              console.log('No date selected');
+              // Handle the case where no date is selected
+          }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
               
-            
-              const startTimeInput = document.getElementById('Start1');
-              const endTimeInput = document.getElementById('end1');
-              const totalInput = document.getElementById('total1');
-            
-              startTimeInput.addEventListener('change', updateTotal1);
-              endTimeInput.addEventListener('change', updateTotal1);
-            
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal1() {
-                const startTime = updateTimeValue(startTimeInput.value);
-                const endTime = updateTimeValue(endTimeInput.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput.value = '';
-                    endTimeInput.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput.value = '';
-                    endTimeInput.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
-                    totalInput.value = diffInHours;
-                  }
-                }
-              }
+      const startTimeInput = document.getElementById('Start1');
+      const endTimeInput = document.getElementById('end1');
+      const totalInput = document.getElementById('total1');
+      
+      startTimeInput.addEventListener('change', updateTotal1);
+      endTimeInput.addEventListener('change', updateTotal1);
+      
+      function updateTimeValue(timeString) {
+        const [hours, minutes] = timeString.split(":");
+        const d = new Date();
+        d.setHours(hours);
+        d.setMinutes(minutes);
+        return d;
+      }
+      
+      function updateTotal1() {
+        const startTime = updateTimeValue(startTimeInput.value);
+        const endTime = updateTimeValue(endTimeInput.value);
+        console.log(startTime, endTime);
+      
+        if (startTime && endTime) {
+          if (endTime < startTime) {
+            totalInput.value = '';
+            endTimeInput.value = '';
+            alert("End time cannot be earlier than start time.");
+          } else if (endTime.getTime() === startTime.getTime()) {
+            totalInput.value = '';
+            endTimeInput.value = '';
+            alert("Start time and end time cannot be the same.");
+          } else {
+            const diffInMilliseconds = endTime - startTime;
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+            totalInput.value = diffInHours;
+          }
+        }
+      }
+      
             
             
               
@@ -986,7 +1604,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput2.value = diffInHours;
                   }
                 }
@@ -1026,7 +1644,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput3.value = diffInHours;
                   }
                 }
@@ -1067,7 +1685,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput4.value = diffInHours;
                   }
                 }
@@ -1107,7 +1725,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput5.value = diffInHours;
                   }
                 }
@@ -1146,7 +1764,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput6.value = diffInHours;
                   }
                 }
@@ -1183,7 +1801,7 @@ display: none;
                     alert("Start time and end time cannot be the same.");
                   } else {
                     const diffInMilliseconds = endTime - startTime;
-                    const diffInHours = diffInMilliseconds / (1000 * 60 * 60);
+            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
                     totalInput7.value = diffInHours;
                   }
                 }
