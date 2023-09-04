@@ -17,83 +17,86 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap" rel="stylesheet">
 
     <style>
-       
-            *
-         {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         }
-         .header{
-         position: relative;
-         top: 0;
-         left: 0;
-         width: 100%;
-         padding: 10px 40px ;
-         padding-right: 400px;
-         background-color: black;
-         display: flex;
-         justify-content: space-between;
-         z-index: 100;
-         }
-         .logo{
-         color: white;
-         text-decoration: none;
-         font-weight: 600;
-         right: 40px;
-         margin-right: 30px;
-         font-size: 1.5rem;
-         }
-         .navbar a {
-         font-size: 16px;
-         color: black;
-         text-decoration: none;
-         font-weight: 400;
-         }
-         ul{
-         list-style: none;
-         }
-         .menu1 > li ,.menu1 > a{
-         display: inline-block;
-         }
-         .menu1{
-            position: relative;
-            left: 250px;
-            font-family: Arial, Helvetica, sans-serif;
-         }
-        
-         .menu1 a {
-         text-decoration: none;
-         color: white;
-         display: block;
-         padding: 10px 1.5rem;
-         transition: background-color .22s ease, color .22s ease;
-         position: relative;
-        
-        }
+      *
+    {
+    margin: 0;
+    padding: 0;
+    }
+    
+     .header{
+     position: relative;
+     top: 0;
+     width: auto;
+     padding: 10px 40px ;
+     padding-right: 400px;
+     background-color: black;
+     display: flex;
+     justify-content: space-between;
+     z-index: 100;
      
-         /*submenu1 level 1 styles*/
-         .submenu1{
-         position: absolute;
-         background-color: black;
-         width: auto;
-         z-index: 100;
+     }
+     .logo{
+     color: white;
+     text-decoration: none;
+     font-weight: 600;
+     right: 40px;
+     margin-right: 30px;
+     font-size: 1.5rem;
+     }
+     .header a {
+     font-size: 16px;
+     color: black;
+     text-decoration: none;
+     font-weight: 400;
+     
+     }
+     ul{
+     list-style: none;
+     }
+     .menu1 > li ,.menu1 > a{
+     display: inline-block;
+     }
+     .menu1{
+        position: relative;
+        left: 250px;
+        font-family: Arial, Helvetica, sans-serif;
+     }
+    
+     .menu1 a {
+     text-decoration: none;
+     color: white;
+     display: block;
+     padding: 10px 1.5rem;
+     transition: background-color .22s ease, color .22s ease;
+     position: relative;
+    
+    }
+ 
+     /*submenu1 level 1 styles*/
+     .submenu1{
+     position: absolute;
+     background-color: black;
+     width: auto;
+     z-index: 100;
 display: none;
-         }
+font-family: Arial, Helvetica, sans-serif;
 
-        
-         .submenu1 a {
-         color: gray;
+     }
 
-         }
-         .submenu1 .done{
-         color: white;
-         }
-         /*show menu1 on hover*/
-         .menu1 li:hover> .submenu1 {
-         display: block;
-         animation: slideup .3s ease;
-         }
+   
+    
+     .submenu1 a {
+     color: gray;
+
+     }
+     .submenu1 .done{
+     color: white;
+     }
+     /*show menu1 on hover*/
+     .menu1 li:hover> .submenu1 {
+     display: block;
+     animation: slideup .3s ease;
+     }
 
           
            
@@ -111,18 +114,24 @@ display: none;
 
 
 
-         @media (max-width: 1500px) {
+    @media (max-width: 1500px) {
          /* Adjust navigation styles as needed for medium screens */
 
-.header{
-    padding-right: 0px;
-
-}
-
-.menu1{
-    left: 200px;
-    padding-right: 200px;
-}
+         .header{
+            padding-right: 0px;
+            padding: 10px 50px ;
+            padding-right: 200px;
+            border: none;
+            right: 100px;
+            width: 110%;
+        
+        
+        }
+        
+        .menu1{
+            left: 200px;
+            padding-right: 200px;
+        }
 
          }
     
