@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=0.6">
       <title>User Availability</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,14 @@
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <style>
-        *
-        {
-        margin: 0;
-        padding: 0;
-        }
-        
+
+        body{
+          zoom: 80%;
+      }
+         * {
+         margin: 0;
+         padding: 0;
+         }
          .header{
          position: relative;
          top: 0;
@@ -35,7 +37,6 @@
          display: flex;
          justify-content: space-between;
          z-index: 100;
-         
          }
          .logo{
          color: white;
@@ -50,7 +51,6 @@
          color: black;
          text-decoration: none;
          font-weight: 400;
-         
          }
          ul{
          list-style: none;
@@ -59,11 +59,10 @@
          display: inline-block;
          }
          .menu1{
-            position: relative;
-            left: 250px;
-            font-family: Arial, Helvetica, sans-serif;
+         position: relative;
+         left: 250px;
+         font-family: Arial, Helvetica, sans-serif;
          }
-        
          .menu1 a {
          text-decoration: none;
          color: white;
@@ -71,25 +70,18 @@
          padding: 10px 1.5rem;
          transition: background-color .22s ease, color .22s ease;
          position: relative;
-        
-        }
-     
+         }
          /*submenu1 level 1 styles*/
          .submenu1{
          position: absolute;
          background-color: black;
          width: auto;
          z-index: 100;
-display: none;
-font-family: Arial, Helvetica, sans-serif;
-
+         display: none;
+         font-family: Arial, Helvetica, sans-serif;
          }
-
-       
-        
          .submenu1 a {
          color: gray;
-
          }
          .submenu1 .done{
          color: white;
@@ -105,65 +97,52 @@ font-family: Arial, Helvetica, sans-serif;
          margin-top: 20px;
          font-family: Arial, Helvetica, sans-serif;
          background: gray;
-
          }
-       
          .containerD{
-          width: 90%;
-          background-color: lightgray;
-          position: relative;
-          left: 60px;
-          height: 560px;
-          top: 40px;
-          }
+         width: 90%;
+         background-color: lightgray;
+         position: relative;
+         left: 60px;
+         height: 560px;
+         top: 40px;
+         }
          .containerD .dates{
          position: absolute;
-         left: 950px;
+         left: 1010px;
          color: black;
          margin-top: 11px;
          }
          .date-container{
-          text-align: center;
-          width: 160px;
-          height: 30px;
-          position: absolute;
-          bottom: 520px;
-          left: 1200px;
-          border-radius: 6px;
-          cursor: pointer;
-          font-family: Arial, Helvetica, sans-serif;
+         text-align: center;
+         width: 160px;
+         height: 30px;
+         position: absolute;
+         bottom: 520px;
+         left: 1400px;
+         border-radius: 6px;
+         cursor: poin7er;
+         font-family: Arial, Helvetica, sans-serif;
          }
-
-
          .savebtn{
-          color:black;
-          margin-top: 500px;
-          margin-left: 1310px;
-          padding: 8px;
-          border-radius: 5px;
-          box-shadow: none;
-          cursor: pointer;
-          position: relative;
-
-        }
-        
-        
-        .Duplicatebtn{
-          color:black;
-          margin-left: 1220px;
-          padding: 8px;
-          border-radius: 5px;
-          box-shadow: none;
-          cursor: pointer;
-          bottom: 35px;
-position: relative;
-        
-        }
-
-
-       
-
-
+         color:black;
+         margin-top: 500px;
+         margin-left: 1500px;
+         padding: 8px;
+         border-radius: 5px;
+         box-shadow: none;
+         cursor: pointer;
+         position: relative;
+         }
+         .Duplicatebtn{
+         color:black;
+         margin-left: 1410px;
+         padding: 8px;
+         border-radius: 5px;
+         box-shadow: none;
+         cursor: pointer;
+         bottom: 35px;
+         position: relative;
+         }
          .datepicker{
          text-align: center;
          width: 160px;
@@ -171,33 +150,23 @@ position: relative;
          border-radius: 6px;
          cursor: pointer;
          font-family: Arial, Helvetica, sans-serif;
-
-
          }
          .containerD .startT{
          position: absolute;
-         left: 320px;
-         margin-top:  80px;
+         left: 180px;
+         margin-top: 80px;
          color: black;
-         }
-
-         .breakT{
-            position: absolute;
-            left: 510px;
-            margin-top:  80px;
-            color: black;
-
          }
          .containerD .endT{
          position: absolute;
-         left: 700px;
+         left: 1050px;
          color: black;
          margin-top: 80px;
          }
          .containerD .date{
          position: absolute;
-         margin-top:  80px;
-         left: 115px;
+         margin-top: 80px;
+         left: 50px;
          }
          .endTime:hover{
          cursor: pointer;
@@ -209,1605 +178,2055 @@ position: relative;
          }
          .total{
          position: absolute;
-         left: 900px;
+         left: 1200px;
          color: black;
-         margin-top: 80px;  
+         margin-top: 70px;
          }
          .containerD .StartTime1{
          position: absolute;
-         left: 320px;
-         margin-top: 130px;
+         left: 180px;
+         margin-top: 110px;
          color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT1{
-            position: absolute;
-            left: 510px;
-            margin-top: 130px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
          .containerD .endTime1{
          position: absolute;
-         left: 700px;
-         margin-top: 130px;
-         color: black; 
+         left: 1010px;
+         margin-top: 110px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD1{
-                position: absolute;
-         left: 900px;
-         margin-top: 130px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 110px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .containerD .StartTime2{
          position: absolute;
-         left: 320px;
-         margin-top: 180px;
+         left: 180px;
+         margin-top: 160px;
          color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT2{
-            position: absolute;
-            left: 510px;
-            margin-top: 180px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
          .containerD .endTime2{
          position: absolute;
-         left: 700px;
-         margin-top: 180px;
-         color: black; 
+         left: 1010px;
+         margin-top: 160px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD2{
-                position: absolute;
-         left: 900px;
-         margin-top: 180px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 160px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .containerD .StartTime3{
          position: absolute;
-         left: 320px;
-         margin-top: 230px;
+         left: 180px;
+         margin-top: 210px;
          color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT3{
-            position: absolute;
-            left: 510px;
-            margin-top: 230px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
          .containerD .endTime3{
          position: absolute;
-         left: 700px;
-         margin-top: 230px;
-         color: black; 
+         left: 1010px;
+         margin-top: 210px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD3{
-                position: absolute;
-         left: 900px;
-         margin-top: 230px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 210px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .containerD .StartTime4{
          position: absolute;
-         left: 320px;
-         margin-top: 280px;
+         left: 180px;
+         margin-top: 260px;
          color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT4{
-            position: absolute;
-            left: 510px;
-            margin-top: 280px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
          .containerD .endTime4{
          position: absolute;
-         left: 700px;
-         margin-top: 280px;
-         color: black; 
+         left: 1010px;
+         margin-top: 260px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD4{
-                position: absolute;
-         left: 900px;
-         margin-top: 280px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 260px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
-         border-radius: 5px;
-         font-size: 14px;
-         } 
-         .containerD .StartTime5{
-         position: absolute;
-         left: 320px;
-         margin-top: 330px;
-         color: black;
-         width: auto;
-         padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT5{
-            position: absolute;
-            left: 510px;
-            margin-top: 330px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-         .containerD .endTime5{
+         .containerD .StartTime5{
          position: absolute;
-         left: 700px;
-         margin-top: 330px;
-         color: black; 
+         left: 180px;
+         margin-top: 310px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime5{
+         position: absolute;
+         left: 1010px;
+         margin-top: 310px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD5{
-                position: absolute;
-         left: 900px;
-         margin-top: 330px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 310px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .containerD .StartTime6{
          position: absolute;
-         left: 320px;
-         margin-top: 380px;
+         left: 180px;
+         margin-top: 360px;
          color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT6{
-            position: absolute;
-            left: 510px;
-            margin-top: 380px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-
          .containerD .endTime6{
          position: absolute;
-         left: 700px;
-         margin-top: 380px;
-         color: black; 
+         left: 1010px;
+         margin-top: 360px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD6{
-                position: absolute;
-         left: 900px;
-         margin-top: 380px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 360px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
-         border-radius: 5px;
-         font-size: 14px;
-         } 
-         .containerD .StartTime7{
-         position: absolute;
-         left: 320px;
-         margin-top: 430px;
-         color: black;
-         width: auto;
-         padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
-
-         .breakT7{
-            position: absolute;
-            left: 510px;
-            margin-top: 430px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-
-         .containerD .endTime7{
+         .containerD .StartTime7{
          position: absolute;
-         left: 700px;
-         margin-top: 430px;
-         color: black; 
+         left: 180px;
+         margin-top: 410px;
+         color: black;
          width: auto;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime7{
+         position: absolute;
+         left: 1010px;
+         margin-top: 410px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
          }
          .totalD7{
-                position: absolute;
-         left: 900px;
-         margin-top: 430px;
-         color: black; 
+         position: absolute;
+         left: 1200px;
+         margin-top: 410px;
+         color: black;
          width: 50px;
          padding: 5px;
-              border: 1px solid black;
+         border: 1px solid black;
          border-radius: 5px;
          font-size: 14px;
-         } 
+         }
          .days{
          position: absolute;
-         margin-top:  115px;
+         margin-top: 95px;
          justify-content: space-between;
-         left: 60px;    
-         }
-         .days div{
-         padding: 16px;
+         left: 40px;
          }
          .submenu1 li :hover {
          background-color:#36454f;
          }
-
-
          .day1{
-          position: absolute;
-          left: 50px;
-          margin-top: 15px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day2{
-          position: absolute;
-          left: 50px;
-          margin-top: 65px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day3{
-          position: absolute;
-          left: 50px;
-          margin-top: 115px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day4{
-          position: absolute;
-          left: 50px;
-          margin-top: 165px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day5{
-          position: absolute;
-          left: 50px;
-          margin-top: 215px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day6{
-          position: absolute;
-          left: 50px;
-          margin-top: 265px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-        .day7{
-          position: absolute;
-          left: 50px;
-          margin-top: 315px;
-          color: black; 
-          width: 50px;
-          padding: 5px;
-          border: none;
-          background-color: lightgray;
-          border-radius: 5px;
-          font-size: 14px;
-        }
-     
-
-
-     
-
-
-
-         
-
-
-
-
-
-
+         position: absolute;
+         margin-top: 15px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day2{
+         position: absolute;
+         margin-top: 65px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day3{
+         position: absolute;
+         margin-top: 115px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day4{
+         position: absolute;
+         margin-top: 165px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day5{
+         position: absolute;
+         margin-top: 215px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day6{
+         position: absolute;
+         margin-top: 265px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day7{
+         position: absolute;
+         margin-top: 315px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .BREAK1ST{
+         position: absolute;
+         margin-top: 80px;
+         left: 350px;
+         }
+         .BREAK1END{
+         position: absolute;
+         margin-top: 80px;
+         left: 500px;
+         }
+         .STbreakT11{
+         position: absolute;
+         left: 350px;
+         margin-top: 110px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT12{
+         position: absolute;
+         left: 350px;
+         margin-top: 160px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT13{
+         position: absolute;
+         left: 350px;
+         margin-top: 210px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT14{
+         position: absolute;
+         left: 350px;
+         margin-top: 260px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT15{
+         position: absolute;
+         left: 350px;
+         margin-top: 310px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT16{
+         position: absolute;
+         left: 350px;
+         margin-top: 360px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT17{
+         position: absolute;
+         left: 350px;
+         margin-top: 410px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT11{
+         position: absolute;
+         left: 500px;
+         margin-top: 110px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT12{
+         position: absolute;
+         left: 500px;
+         margin-top: 160px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT13{
+         position: absolute;
+         left: 500px;
+         margin-top: 210px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT14{
+         position: absolute;
+         left: 500px;
+         margin-top: 260px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT15{
+         position: absolute;
+         left: 500px;
+         margin-top: 310px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT16{
+         position: absolute;
+         left: 500px;
+         margin-top: 360px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT17{
+         position: absolute;
+         left: 500px;
+         margin-top: 410px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .BREAK2ST{
+         position: absolute;
+         margin-top: 80px;
+         left: 680px;
+         }
+         .BREAK2END{
+         position: absolute;
+         margin-top: 80px;
+         left: 830px;
+         }
+         .STbreakT21{
+         position: absolute;
+         left: 680px;
+         margin-top: 110px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT22{
+         position: absolute;
+         left: 680px;
+         margin-top: 160px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT23{
+         position: absolute;
+         left: 680px;
+         margin-top: 210px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT24{
+         position: absolute;
+         left: 680px;
+         margin-top: 260px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT25{
+         position: absolute;
+         left: 680px;
+         margin-top: 310px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT26{
+         position: absolute;
+         left: 680px;
+         margin-top: 360px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .STbreakT27{
+         position: absolute;
+         left: 680px;
+         margin-top: 410px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT21{
+         position: absolute;
+         left: 830px;
+         margin-top: 110px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT22{
+         position: absolute;
+         left: 830px;
+         margin-top: 160px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT23{
+         position: absolute;
+         left: 830px;
+         margin-top: 210px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT24{
+         position: absolute;
+         left: 830px;
+         margin-top: 260px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT25{
+         position: absolute;
+         left: 830px;
+         margin-top: 310px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT26{
+         position: absolute;
+         left: 830px;
+         margin-top: 360px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .ENDbreakT27{
+         position: absolute;
+         left: 830px;
+         margin-top: 410px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         /* You can add more specific styles as needed for these input elements */
          @media (max-width: 1500px) {
          /* Adjust navigation styles as needed for medium screens */
-
-.header{
-    padding-right: 0px;
-    padding: 10px 50px ;
-    padding-right: 200px;
-    border: none;
-    right: 100px;
-    width: 110%;
-
-
-}
-
-.menu1{
-    left: 200px;
-    padding-right: 200px;
-}
-
-
-.container{
-  width: 130%;
-  height: 650px;
-  margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: gray;
-
-  }
-
-  .containerD{
-   width: 92%;
-   background-color: lightgray;
-   position: relative;
-   left: 30px;
-   height: 560px;
-   top: 40px;
-   }
-
-  .innercont {
-    height: 500px;
-    width: 20%;
-
-}
-
-
- 
-
-
-    .date-container{
-      text-align: center;
-      width: 160px;
-      height: 30px;
-      position: absolute;
-      bottom: 520px;
-      left: 0px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: Arial, Helvetica, sans-serif;
-     }
-
-    .datepicker{
-      text-align: center;
-      width: 160px;
-      height: 30px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: Arial, Helvetica, sans-serif;
-    
-      position: relative;
-      left: 12px;
-
-
-      }
+         .header{
+         padding-right: 0px;
+         padding: 10px 50px ;
+         padding-right: 200px;
+         border: none;
+         right: 100px;
+         width: 110%;
+         }
+         .menu1{
+         left: 200px;
+         padding-right: 200px;
+         }
+         .container{
+         width: 130%;
+         height: 650px;
+         margin-top: 20px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: gray;
+         }
+         .containerD{
+         width: 92%;
+         background-color: lightgray;
+         position: relative;
+         left: 30px;
+         height: 560px;
+         top: 40px;
+         }
+         .innercont {
+         height: 500px;
+         width: 20%;
+         }
+         .date-container{
+         text-align: center;
+         width: 160px;
+         height: 30px;
+         position: absolute;
+         bottom: 520px;
+         left: 0px;
+         border-radius: 6px;
+         cursor: pointer;
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         .datepicker{
+         text-align: center;
+         width: 160px;
+         height: 30px;
+         border-radius: 6px;
+         cursor: pointer;
+         font-family: Arial, Helvetica, sans-serif;
+         position: relative;
+         left: 12px;
+         }
          .date-container .date-icon{
          position: absolute;
          right: 125px;
          top: 7px;
          }
          .savebtn{
-            position: relative;
-            right: 1200px;
-            top: 5.5px;
-            
+         position: relative;
+         right: 1200px;
+         top: 5.5px;
          }
-
          .Duplicatebtn{
-            position: relative;
-            right: 1200px;
-            bottom: 30px;
-
-
+         position: relative;
+         right: 1200px;
+         bottom: 30px;
          }
-
-
          .containerD .startT{
-            position: absolute;
-            left: 240px;
-            margin-top:  80px;
-            color: black;
-            }
-
-
-               .breakT{
-            position: absolute;
-            left: 380px;
-            margin-top:  80px;
-            color: black;
-
+         position: absolute;
+         left: 240px;
+         margin-top: 80px;
+         color: black;
          }
-
-
-            .containerD .endT{
-            position: absolute;
-            left: 530px;
-            color: black;
-            margin-top: 80px;
-            }
-            .containerD .date{
-            position: absolute;
-            margin-top:  80px;
-            left: 30px;
-            }
-
-            
+         .breakT{
+         position: absolute;
+         left: 380px;
+         margin-top: 80px;
+         color: black;
+         }
+         .containerD .endT{
+         position: absolute;
+         left: 730px;
+         color: black;
+         margin-top: 80px;
+         }
+         .containerD .date{
+         position: absolute;
+         margin-top: 80px;
+         left: 30px;
+         }
          .total{
-            position: absolute;
-            left: 760px;
-            color: black;
-            margin-top: 80px; 
-            }
-
-
-
-
-            .containerD .StartTime1{
-            position: absolute;
-            left: 240px;
-            margin-top: 130px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-            
-         .breakT1{
-            position: absolute;
-            left: 380px;
-            margin-top: 130px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-
-
-            .containerD .endTime1{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 130px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-        
-
-            .totalD1{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 130px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-
-            .containerD .StartTime2{
-            position: absolute;
-            left: 240px;
-            margin-top: 180px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-            
-         .breakT2{
-            position: absolute;
-            left: 380px;
-            margin-top: 180px;
-            color: black;
-            width: auto;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-
-
-
-            .containerD .endTime2{
-            position: absolute;
-            left: 530px;
-            margin-top: 180px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD2{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 180px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-
-            }
-            .containerD .StartTime3{
-            position: absolute;
-            left: 240px;
-            margin-top: 230px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-            .breakT3{
-              position: absolute;
-              left: 380px;
-              margin-top: 230px;
-              color: black;
-              width: auto;
-              padding: 5px;
-                border: 1px solid black;
-              border-radius: 5px;
-              font-size: 14px;
-          }
-
-
-
-
-
-
-
-
-            .containerD .endTime3{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 230px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD3{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 230px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .containerD .StartTime4{
-            position: absolute;
-            left: 240px;
-            margin-top: 280px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-            .breakT4{
-              position: absolute;
-              left: 380px;
-              margin-top: 280px;
-              color: black;
-              width: auto;
-              padding: 5px;
-                border: 1px solid black;
-              border-radius: 5px;
-              font-size: 14px;
-          }
-
-            .containerD .endTime4{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 280px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD4{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 280px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            } 
-            .containerD .StartTime5{
-            position: absolute;
-            left: 240px;
-            margin-top: 330px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-
-
-            .breakT5{
-              position: absolute;
-              left: 380px;
-              margin-top: 330px;
-              color: black;
-              width: auto;
-              padding: 5px;
-                border: 1px solid black;
-              border-radius: 5px;
-              font-size: 14px;
-          }
-
-
-
-
-
-
-
-            .containerD .endTime5{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 330px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD5{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 330px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .containerD .StartTime6{
-            position: absolute;
-            left: 240px;
-            margin-top: 380px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-
-
-
-            .breakT6{
-              position: absolute;
-              left: 380px;
-              margin-top: 380px;
-              color: black;
-              width: auto;
-              padding: 5px;
-                border: 1px solid black;
-              border-radius: 5px;
-              font-size: 14px;
-          }
-
-
-
-
-
-
-
-
-            .containerD .endTime6{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 380px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD6{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 380px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            } 
-            .containerD .StartTime7{
-            position: absolute;
-            left: 240px;
-            margin-top: 430px;
-            color: black;
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-
-
-
-
-            .breakT7{
-              position: absolute;
-              left: 380px;
-              margin-top: 430px;
-              color: black;
-              width: auto;
-              padding: 5px;
-                border: 1px solid black;
-              border-radius: 5px;
-              font-size: 14px;
-          }
-
-
-
-
-
-
-
-
-            .containerD .endTime7{
-            position: absolute;
-                        left: 530px;
-
-            margin-top: 430px;
-            color: black; 
-            width: 100px;
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            }
-            .totalD7{
-          
-          position: absolute;
-            left: 760px;
-            margin-top: 430px;
-            color: black; 
-            width: 50px;
-            padding: 5px;
-              border: 1px solid black;
-            border-radius: 5px;
-            font-size: 14px;
-            } 
-            .days{
-            position: absolute;
-            margin-top:  115px;
-            justify-content: space-between;
-            left: 0px;    
-            }
-            
-
-
-            .day1{
-              position: absolute;
-              left: 40px;
-              margin-top: 15px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day2{
-              position: absolute;
-              left: 40px;
-              margin-top: 65px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day3{
-              position: absolute;
-              left: 40px;
-              margin-top: 115px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day4{
-              position: absolute;
-              left: 40px;
-              margin-top: 165px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day5{
-              position: absolute;
-              left: 40px;
-              margin-top: 215px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day6{
-              position: absolute;
-              left: 40px;
-              margin-top: 265px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-            .day7{
-              position: absolute;
-              left: 40px;
-              margin-top: 315px;
-              color: black; 
-              width: 50px;
-              padding: 5px;
-              border: none;
-              background-color: lightgray;
-              border-radius: 5px;
-              font-size: 14px;
-            }
-         
-
-
+         position: absolute;
+         left: 760px;
+         color: black;
+         margin-top: 80px;
          }
-
-
-         
-
-
-
+         .containerD .StartTime1{
+         position: absolute;
+         left: 240px;
+         margin-top: 130px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT1{
+         position: absolute;
+         left: 380px;
+         margin-top: 130px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime1{
+         position: absolute;
+         left: 730px;
+         margin-top: 130px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD1{
+         position: absolute;
+         left: 760px;
+         margin-top: 130px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime2{
+         position: absolute;
+         left: 240px;
+         margin-top: 180px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT2{
+         position: absolute;
+         left: 380px;
+         margin-top: 180px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime2{
+         position: absolute;
+         left: 730px;
+         margin-top: 180px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD2{
+         position: absolute;
+         left: 760px;
+         margin-top: 180px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime3{
+         position: absolute;
+         left: 240px;
+         margin-top: 230px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT3{
+         position: absolute;
+         left: 380px;
+         margin-top: 230px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime3{
+         position: absolute;
+         left: 730px;
+         margin-top: 230px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD3{
+         position: absolute;
+         left: 760px;
+         margin-top: 230px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime4{
+         position: absolute;
+         left: 240px;
+         margin-top: 280px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT4{
+         position: absolute;
+         left: 380px;
+         margin-top: 280px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime4{
+         position: absolute;
+         left: 730px;
+         margin-top: 280px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD4{
+         position: absolute;
+         left: 760px;
+         margin-top: 280px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime5{
+         position: absolute;
+         left: 240px;
+         margin-top: 330px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT5{
+         position: absolute;
+         left: 380px;
+         margin-top: 330px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime5{
+         position: absolute;
+         left: 730px;
+         margin-top: 330px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD5{
+         position: absolute;
+         left: 760px;
+         margin-top: 330px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime6{
+         position: absolute;
+         left: 240px;
+         margin-top: 380px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT6{
+         position: absolute;
+         left: 380px;
+         margin-top: 380px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime6{
+         position: absolute;
+         left: 730px;
+         margin-top: 380px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD6{
+         position: absolute;
+         left: 760px;
+         margin-top: 380px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .StartTime7{
+         position: absolute;
+         left: 240px;
+         margin-top: 430px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .breakT7{
+         position: absolute;
+         left: 380px;
+         margin-top: 430px;
+         color: black;
+         width: auto;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .containerD .endTime7{
+         position: absolute;
+         left: 730px;
+         margin-top: 430px;
+         color: black;
+         width: 100px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .totalD7{
+         position: absolute;
+         left: 760px;
+         margin-top: 430px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: 1px solid black;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .days{
+         position: absolute;
+         margin-top: 115px;
+         justify-content: space-between;
+         left: 0px;
+         }
+         .day1{
+         position: absolute;
+         left: 40px;
+         margin-top: 15px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day2{
+         position: absolute;
+         left: 40px;
+         margin-top: 65px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day3{
+         position: absolute;
+         left: 40px;
+         margin-top: 115px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day4{
+         position: absolute;
+         left: 40px;
+         margin-top: 165px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day5{
+         position: absolute;
+         left: 40px;
+         margin-top: 215px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day6{
+         position: absolute;
+         left: 40px;
+         margin-top: 265px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         .day7{
+         position: absolute;
+         left: 40px;
+         margin-top: 315px;
+         color: black;
+         width: 50px;
+         padding: 5px;
+         border: none;
+         background-color: lightgray;
+         border-radius: 5px;
+         font-size: 14px;
+         }
+         }
          .innercont{
-          height: 500px;
-          width: 1100px;
-          margin-left: 30px;
-          margin-top: 20px;
-          position: absolute;
-        
-        }
-
-
-
-
-
+         height: 500px;
+         width: 1100px;
+         margin-left: 30px;
+         margin-top: 20px;
+         position: absolute;
+         }
       </style>
    </head>
    <body>
       <header class="header">
          </a>
-         
-            <ul class="menu1">
-               <li><a href="/The-Work-planing/index.html">Home</a> </li>
-               <li>
-                  <a href="#">Views</a>
-                  <ul class="submenu1">
-                     <li><a href="#">Work Plan View</a></li>
-                     <li> <a href="/The-Work-planing/The-Gantt.html" class="done">Resource Histogram</a></li>
-                     <li><a href="#">Sales Plan View</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#">Work Planning Data</a>
-                  <ul class="submenu1">
-                     <li><a href="/The-Work-planing/The-Projects-View.html" class="done">Project Description</a></li>
-                     <li> <a href="#">Estimate Hours</a></li>
-                     <li><a href="#">Project Data Entry</a></li>
-                     <li><a href="#">Resource Allocation</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#">User's Data Entry</a>
-                  <ul class="submenu1">
-                     <li><a href="#">DL Input Hours</a></li>
-                     <li><a href="#">Project Progress</a></li>
-                     <li><a href="https://mohmad5k.github.io/The-Work-planing/User-Availability.html" class="done">User Availability</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#">Admin</a>  
-                  <ul class="submenu1">
-                     <li> <a href="#">Access Permissions </a></li>
-                     <li> <a href="#">Role</a></li>
-                     <li> <a href="#">New Feature Popup</a></li>
-                     <li> <a href="#">Change Password</a></li>
-                     <li> <a href="#">Dashbored</a></li>
-                     <li> <a href="#">Logout</a></li>
-                  </ul>
-               </li>
-            </ul>
+         <ul class="menu1">
+            <li><a href="/The-Work-planing/index.html">Home</a> </li>
+            <li>
+               <a href="#">Views</a>
+               <ul class="submenu1">
+                  <li><a href="#">Work Plan View</a></li>
+                  <li> <a href="/The-Work-planing/The-Gantt.html" class="done">Resource Histogram</a></li>
+                  <li><a href="#">Sales Plan View</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#">Work Planning Data</a>
+               <ul class="submenu1">
+                  <li><a href="/The-Work-planing/The-Projects-View.html" class="done">Project Description</a></li>
+                  <li> <a href="#">Estimate Hours</a></li>
+                  <li><a href="#">Project Data Entry</a></li>
+                  <li><a href="#">Resource Allocation</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#">User's Data Entry</a>
+               <ul class="submenu1">
+                  <li><a href="#">DL Input Hours</a></li>
+                  <li><a href="#">Project Progress</a></li>
+                  <li><a href="https://mohmad5k.github.io/The-Work-planing/User-Availability.html" class="done">User Availability</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#">Admin</a>  
+               <ul class="submenu1">
+                  <li> <a href="#">Access Permissions </a></li>
+                  <li> <a href="#">Role</a></li>
+                  <li> <a href="#">New Feature Popup</a></li>
+                  <li> <a href="#">Change Password</a></li>
+                  <li> <a href="#">Dashbored</a></li>
+                  <li> <a href="#">Logout</a></li>
+               </ul>
+            </li>
+         </ul>
       </header>
       <body>
-
-
-        <script type="text/javascript">
-          function showError(errorMessage, dates) {
-          alert(errorMessage + " Dates: " + dates.join(', '));
-      }
-      
-          </script>
-        <script>
-          
-          
-        </script>
-        <form action="save.php"method="post">
-         <div class="container">
-            <div class="containerD">
-                <div class="innercont">
-               <p class="startT">From</p>
-               <p class="breakT">Break</p>
-               <p class="endT">To</p>
-               <p class="total">Total</p>
-               <input type="time"  id="Start1" class="StartTime1" name="STtime1">
-               <input type="time"  id="break1" class="breakT1" name="BRtime1">
-
-               <input type="time"  id="end1" class="endTime1" name="ENDtime1">
-               <input type="number"  id="total1" class="totalD1"   name="total1" readonly >
-               <input type="time"  id="Start2" class="StartTime2" name="STtime2">
-               <input type="time"  id="break2" class="breakT2" name="BRtime2">
-
-               <input type="number"  id="total2" class="totalD2" name="total2" readonly >
-               <input type="time"  id="end2" class="endTime2" name="ENDtime2">
-               <input type="time"  id="Start3" class="StartTime3" name="STtime3">
-               <input type="time"  id="break3" class="breakT3" name="BRtime3">
-
-               <input type="number"  id="total3" class="totalD3" name="total3" readonly >
-               <input type="time"  id="end3" class="endTime3" name="ENDtime3">
-               <input type="time"  id="Start4" class="StartTime4" name="STtime4">
-               <input type="time"  id="break4" class="breakT4" name="BRtime4">
-
-               <input type="number"  id="total4" class="totalD4" name="total4" readonly >
-               <input type="time"  id="end4" class="endTime4" name="ENDtime4">
-               <input type="time"  id="Start5" class="StartTime5" name="STtime5">
-               <input type="time"  id="break5" class="breakT5" name="BRtime5">
-
-               <input type="number"  id="total5" class="totalD5" name="total5" readonly >
-               <input type="time"  id="end5" class="endTime5" name="ENDtime5">
-               <input type="time"  id="Start6" class="StartTime6" name="STtime6">
-               <input type="time"  id="break6" class="breakT6" name="BRtime6">
-
-               <input type="number"  id="total6" class="totalD6" name="total6" readonly >
-               <input type="time"  id="end6" class="endTime6" name="ENDtime6">
-               <input type="time"  id="Start7" class="StartTime7" name="STtime7">
-               <input type="time"  id="break7" class="breakT7" name="BRtime7">
-
-               <input type="number"  id="total7" class="totalD7" name="total7" readonly >
-               <input type="time"  id="end7" class="endTime7" name="ENDtime7">
-
-
-
-
-
-
-
-
-               <div class="days" name="days">
-               </div>
-               <p class="date">
-                  Date
-               </p></div>
-
-               
-                <input type="submit" name="savebtn" id="submitButton"  class="savebtn" value="save"></button>
+         <script type="text/javascript">
+            function showError(errorMessage, dates) {
+            alert(errorMessage + " Dates: " + dates.join(', '));
+            }
             
-
-               
-                <button type="button" class="Duplicatebtn"> Duplicate</button>
-
-               
-               <div class="col-md-6">
-                  <div class="date-container">
-                     <input id="date" type="text" class="datepicker" placeholder="Select a date" readonly />
-                     <span class="date-text"></span>       
-                     <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+         </script>
+         <script></script>
+         <form action="save.php"method="post">
+            <div class="container">
+               <div class="containerD">
+                  <div class="innercont">
+                     <p class="startT">From</p>
+                     <p class="endT">To</p>
+                     <p class="total">Total</p>
+                     <p class="BREAK1ST"> Break Start </p>
+                     <p class="BREAK1END"> Break End </p>
+                     <input type="time"  id="Start1" class="StartTime1" name="STtime1">
+                     <input type="time"  id="STbreak11" class="STbreakT11" name="STBRtime11">
+                     <input type="time"  id="ENDbreak11" class="ENDbreakT11" name="ENDBRtime11">
+                     <input type="time"  id="end1" class="endTime1" name="ENDtime1">
+                     <input type="number"  id="total1" class="totalD1"   name="total1" readonly >
+                     <input type="time"  id="Start2" class="StartTime2" name="STtime2">
+                     <input type="time"  id="STbreak12" class="STbreakT12" name="STBRtime12">
+                     <input type="time"  id="ENDbreak12" class="ENDbreakT12" name="ENDBRtime12">
+                     <input type="number"  id="total2" class="totalD2" name="total2" readonly >
+                     <input type="time"  id="end2" class="endTime2" name="ENDtime2">
+                     <input type="time"  id="Start3" class="StartTime3" name="STtime3">
+                     <input type="time"  id="STbreak13" class="STbreakT13" name="STBRtime13">
+                     <input type="time"  id="ENDbreak13" class="ENDbreakT13" name="ENDBRtime13">
+                     <input type="number"  id="total3" class="totalD3" name="total3" readonly >
+                     <input type="time"  id="end3" class="endTime3" name="ENDtime3">
+                     <input type="time"  id="Start4" class="StartTime4" name="STtime4">
+                     <input type="time"  id="STbreak14" class="STbreakT14" name="STBRtime14">
+                     <input type="time"  id="ENDbreak14" class="ENDbreakT14" name="ENDBRtime14">
+                     <input type="number"  id="total4" class="totalD4" name="total4" readonly >
+                     <input type="time"  id="end4" class="endTime4" name="ENDtime4">
+                     <input type="time"  id="Start5" class="StartTime5" name="STtime5">
+                     <input type="time"  id="STbreak15" class="STbreakT15" name="STBRtime15">
+                     <input type="time"  id="ENDbreak15" class="ENDbreakT15" name="ENDBRtime15">
+                     <input type="number"  id="total5" class="totalD5" name="total5" readonly >
+                     <input type="time"  id="end5" class="endTime5" name="ENDtime5">
+                     <input type="time"  id="Start6" class="StartTime6" name="STtime6">
+                     <input type="time"  id="STbreak16" class="STbreakT16" name="STBRtime16">
+                     <input type="time"  id="ENDbreak16" class="ENDbreakT16" name="ENDBRtime16">
+                     <input type="number"  id="total6" class="totalD6" name="total6" readonly >
+                     <input type="time"  id="end6" class="endTime6" name="ENDtime6">
+                     <input type="time"  id="Start7" class="StartTime7" name="STtime7">
+                     <input type="time"  id="STbreak17" class="STbreakT17" name="STBRtime17">
+                     <input type="time"  id="ENDbreak17" class="ENDbreakT17" name="ENDBRtime17">
+                     <input type="number"  id="total7" class="totalD7" name="total7" readonly >
+                     <input type="time"  id="end7" class="endTime7" name="ENDtime7">
+                     <p class="BREAK2ST"> Break Start </p>
+                     <p class="BREAK2END"> Break End </p>
+                     <input type="time"  id="STbreak21" class="STbreakT21" name="STBRtime21">
+                     <input type="time"  id="ENDbreak21" class="ENDbreakT21" name="ENDBRtime21">
+                     <input type="time"  id="STbreak22" class="STbreakT22" name="STBRtime22">
+                     <input type="time"  id="ENDbreak22" class="ENDbreakT22" name="ENDBRtime22">
+                     <input type="time"  id="STbreak23" class="STbreakT23" name="STBRtime23">
+                     <input type="time"  id="ENDbreak23" class="ENDbreakT23" name="ENDBRtime23">
+                     <input type="time"  id="STbreak24" class="STbreakT24" name="STBRtime24">
+                     <input type="time"  id="ENDbreak24" class="ENDbreakT24" name="ENDBRtime24">
+                     <input type="time"  id="STbreak25" class="STbreakT25" name="STBRtime25">
+                     <input type="time"  id="ENDbreak25" class="ENDbreakT25" name="ENDBRtime25">
+                     <input type="time"  id="STbreak25" class="STbreakT25" name="STBRtime25">
+                     <input type="time"  id="ENDbreak25" class="ENDbreakT25" name="ENDBRtime25">
+                     <input type="time"  id="STbreak26" class="STbreakT26" name="STBRtime26">
+                     <input type="time"  id="ENDbreak26" class="ENDbreakT26" name="ENDBRtime26">
+                     <input type="time"  id="STbreak27" class="STbreakT27" name="STBRtime27">
+                     <input type="time"  id="ENDbreak27" class="ENDbreakT27" name="ENDBRtime27">
+                     <div class="days" name="days">
+                     </div>
+                     <p class="date">
+                        Date
+                     </p>
+                  </div>
+                  <input type="submit" name="savebtn" id="submitButton"  class="savebtn" value="save"></button>
+                  <button type="button" class="Duplicatebtn"> Duplicate</button>
+                  <div class="col-md-6">
+                     <div class="date-container">
+                        <input id="date" type="text" class="datepicker" placeholder="Select a date" readonly />
+                        <span class="date-text"></span>       
+                        <i class="date-icon fa fa-calendar" aria-hidden="true"></i>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-        </form>
+         </form>
          <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-         
          <script>
-          
-          
          
-          $(document).ready(function() {
-            // Initialize the datepicker
-            $(".datepicker").datepicker({
-                dateFormat: "D d -M y",
-                todayHighlight: true,
-                autoclose: true,
-                defaultDate: "+0w", // Set default to the current week
-                onSelect: function(dateText) {
-                    var selectedDate = $.datepicker.parseDate("D d -M y", dateText);
-                    displayWeekData(selectedDate);
-                }
-            });
-        
-            // Set default value to the current week
-            const today = new Date();
-            const startOfWeek = new Date(today);
-            startOfWeek.setDate(today.getDate() - today.getDay()); // Start from Sunday
-            $(".datepicker").datepicker("setDate", startOfWeek);
-            displayWeekData(startOfWeek);
-        });
-        
-        function getWeekDay(date) {
-            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const dayIndex = date.getDay();
-            return weekDays[dayIndex];
-        }
-        
-        function displayWeekData(selectedDate) {
-            const daysInWeek = 7;
-            const startDate = new Date(selectedDate);
-            startDate.setDate(selectedDate.getDate() - selectedDate.getDay()); // Start from Sunday
-        
-            // Clear previous data
-            $(".days").empty(); // Remove all child elements
-        
-            for (let i = 0; i < daysInWeek; i++) {
-                const currentDate = new Date(startDate);
-                currentDate.setDate(startDate.getDate() + i);
-                const weekDay = getWeekDay(currentDate);
-        
-                const formattedDate = currentDate.toLocaleDateString("en-US", { weekday: "short", day: "numeric" });
-        
-                // Create and append day elements
-                const dayElement = $("<input>").addClass("day" + (i + 1)).attr("name", "day" + (i + 1)).val(formattedDate);
-                $(".days").append(dayElement);
-            }
-        }
-        
-        // Add a click event handler for the Save button
-        $("#dateForm").submit(function(event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          // Get the selected date from the datepicker input
-          const selectedDate = $(".datepicker").datepicker("getDate");
-
-          // Check if a date is selected
-          if (selectedDate) {
-              // Convert the selected date to a string in your desired format
-              const formattedDate = $.datepicker.formatDate("D d -M y", selectedDate);
-
-              // Set the formatted date as the value of the hidden input
-              $('input[name="selectDate"]').val(formattedDate);
-
-              // Submit the form to save the date using PHP
-              $.ajax({
-                  type: 'POST',
-                  url: 'save.php', // Replace with the actual PHP script
-                  data: $("#dateForm").serialize(),
-                  success: function(response) {
-                      console.log('Date saved successfully');
-                      // You can perform additional actions here if needed
-                  },
-                  error: function(error) {
-                      console.error('Error saving date:', error);
-                      // Handle the error appropriately
+            
+            
+            
+            
+            
+                    
+                    
+                   
+                    $(document).ready(function() {
+                      // Initialize the datepicker
+                      $(".datepicker").datepicker({
+                          dateFormat: "D d -M y",
+                          todayHighlight: true,
+                          autoclose: true,
+                          defaultDate: "+0w", // Set default to the current week
+                          onSelect: function(dateText) {
+                              var selectedDate = $.datepicker.parseDate("D d -M y", dateText);
+                              displayWeekData(selectedDate);
+                          }
+                      });
+                  
+                      // Set default value to the current week
+                      const today = new Date();
+                      const startOfWeek = new Date(today);
+                      startOfWeek.setDate(today.getDate() - today.getDay()); // Start from Sunday
+                      $(".datepicker").datepicker("setDate", startOfWeek);
+                      displayWeekData(startOfWeek);
+                  });
+                  
+                  function getWeekDay(date) {
+                      const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                      const dayIndex = date.getDay();
+                      return weekDays[dayIndex];
                   }
-              });
-          } else {
-              console.log('No date selected');
-              // Handle the case where no date is selected
-          }
-      });
+                  
+                  function displayWeekData(selectedDate) {
+                      const daysInWeek = 7;
+                      const startDate = new Date(selectedDate);
+                      startDate.setDate(selectedDate.getDate() - selectedDate.getDay()); // Start from Sunday
+                  
+                      // Clear previous data
+                      $(".days").empty(); // Remove all child elements
+                  
+                      for (let i = 0; i < daysInWeek; i++) {
+                          const currentDate = new Date(startDate);
+                          currentDate.setDate(startDate.getDate() + i);
+                          const weekDay = getWeekDay(currentDate);
+                  
+                          const formattedDate = currentDate.toLocaleDateString("en-US", { weekday: "short", day: "numeric" });
+                  
+                          // Create and append day elements
+                          const dayElement = $("<input>").addClass("day" + (i + 1)).attr("name", "day" + (i + 1)).val(formattedDate);
+                          $(".days").append(dayElement);
+                      }
+                  }
+                  
+                  // Add a click event handler for the Save button
+                  $("#dateForm").submit(function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+            
+                    // Get the selected date from the datepicker input
+                    const selectedDate = $(".datepicker").datepicker("getDate");
+            
+                    // Check if a date is selected
+                    if (selectedDate) {
+                        // Convert the selected date to a string in your desired format
+                        const formattedDate = $.datepicker.formatDate("D d -M y", selectedDate);
+            
+                        // Set the formatted date as the value of the hidden input
+                        $('input[name="selectDate"]').val(formattedDate);
+            
+                        // Submit the form to save the date using PHP
+                        $.ajax({
+                            type: 'POST',
+                            url: 'save.php', // Replace with the actual PHP script
+                            data: $("#dateForm").serialize(),
+                            success: function(response) {
+                                console.log('Date saved successfully');
+                                // You can perform additional actions here if needed
+                            },
+                            error: function(error) {
+                                console.error('Error saving date:', error);
+                                // Handle the error appropriately
+                            }
+                        });
+                    } else {
+                        console.log('No date selected');
+                        // Handle the case where no date is selected
+                    }
+                });
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                function updateTimeValue(timeString) {
+                  const [hours, minutes] = timeString.split(":");
+                  const d = new Date();
+                  d.setHours(hours);
+                  d.setMinutes(minutes);
+                  return d;
+                }
+            
+                  
+                  
+            
+            
+                        
+                const startTimeInput = document.getElementById('Start1');
+                const startBreak11 = document.getElementById('STbreak11')
+                const endBreak11 = document.getElementById('ENDbreak11')
+                const startBreak21 = document.getElementById('STbreak21')
+                const endBreak21 = document.getElementById('ENDbreak21')
+                const endTimeInput = document.getElementById('end1');
+                const totalInput = document.getElementById('total1');
+                
+                startTimeInput.addEventListener('change', updateTotal1);
+                endTimeInput.addEventListener('change', updateTotal1);
+                startBreak11.addEventListener('change', updateTotal1);
+                endBreak11.addEventListener('change', updateTotal1);
+                
+                startBreak21.addEventListener('change', updateTotal1);
+                endBreak21.addEventListener('change', updateTotal1);
+                
 
+                
+                function updateTotal1() {
+                  const startTime = updateTimeValue(startTimeInput.value);
+                  const stbreak = updateTimeValue(startBreak11.value);
+                  const endbreak = updateTimeValue(endBreak11.value);
+                  const stbreak2 = updateTimeValue(startBreak21.value);
+                  const endbreak2 = updateTimeValue(endBreak21.value);
+                  const endTime = updateTimeValue(endTimeInput.value);
 
+                  console.log(startTime, stbreak, endbreak, endTime);
+                
+                  if (startTime && endTime) {
+                    if (endTime < startTime) {
+                      endTimeInput.value = '';
+                      alert("End time cannot be earlier than start time.");
+                    } else if (endTime.getTime() === startTime.getTime()) {
+                      endTimeInput.value = '';
+                      alert("Start time and end time cannot be the same.");
+                    } else if (stbreak <startTime || endbreak < startTime ) {
+                      startBreak11.value = '';
+                      endBreak11.value = '';
+                      alert("Break time should be within the working hours.");
+                    }else if(endbreak > endTime || stbreak > endTime){
+                      startBreak11.value = '';
+                      endBreak11.value = '';
+                      alert("Break time should be within the working hours.");
 
+                    }
+                     else if (endbreak < stbreak) {
+                      endBreak11.value = '';
+                      alert("End break time cannot be earlier than start break time.");
+                    } 
+                   else if (stbreak2 <startTime || endbreak2 < startTime ) {
+                      startBreak21.value = '';
+                      endBreak21.value = '';
+                      alert("Break time should be within the working hours.");
+                    }else if(endbreak2 > endTime || stbreak2 > endTime){
+                      startBreak21.value = '';
+                      endBreak21.value = '';
+                      alert("Break time should be within the working hours.");
 
+                    }
+                    else if(endbreak2 < endbreak || stbreak2 < endbreak){
+                      startBreak21.value = '';
+                      endBreak21.value = '';
+                      alert("2nd break time cannot be earlier than 1st break time.");
+                    }
+                    else if(endbreak2 < stbreak || stbreak2 < stbreak){
+                      startBreak21.value = '';
+                      endBreak21.value = '';
+                      alert("2nd break time cannot be earlier than 1st break time.");
+                    }
 
+                     else if (endbreak2 < stbreak2) {
+                      endBreak21.value = '';
+                      alert("End break time cannot be earlier than start break time.");
+                    }else {
+                      const BR = endbreak - stbreak;
+                      const diffInBRHours = Math.round(BR / (1000 * 60 * 60)); // Round to the nearest integer
+                      const BR2 = endbreak2 - stbreak2;
+                      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60)); // Round to the nearest integer
 
+                      const diffInMilliseconds = endTime - startTime;
+                      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+                      const totHRs = diffInHours - diffInBRHours ;
+                      const totHRs2 = diffInHours - ( diffInBR2Hours + diffInBRHours);
 
+                      if (isNaN(diffInBRHours)){
+                        totalInput.value = diffInHours;
+                      }
+                      else if (isNaN(diffInBR2Hours)) {
+                        totalInput.value = totHRs;
+                      } else {
+                        totalInput.value = totHRs2;
 
-
-
-
-
-
-
-
-
-
-
-        
-        
-
-
-              
-      const startTimeInput = document.getElementById('Start1');
-      const endTimeInput = document.getElementById('end1');
-      const totalInput = document.getElementById('total1');
+                      }
+                    }
+                  }
+                }
+                
+                
+                      
+                      
+                        
       
-      startTimeInput.addEventListener('change', updateTotal1);
-      endTimeInput.addEventListener('change', updateTotal1);
-      
-      function updateTimeValue(timeString) {
-        const [hours, minutes] = timeString.split(":");
-        const d = new Date();
-        d.setHours(hours);
-        d.setMinutes(minutes);
-        return d;
+                const startTimeInput2 = document.getElementById('Start2');
+const startBreak12 = document.getElementById('STbreak12');
+const endBreak12 = document.getElementById('ENDbreak12');
+const startBreak22 = document.getElementById('STbreak22');
+const endBreak22 = document.getElementById('ENDbreak22');
+const endTimeInput2 = document.getElementById('end2');
+const totalInput2 = document.getElementById('total2');
+
+startTimeInput2.addEventListener('change', updateTotal2);
+endTimeInput2.addEventListener('change', updateTotal2);
+startBreak12.addEventListener('change', updateTotal2);
+endBreak12.addEventListener('change', updateTotal2);
+
+startBreak22.addEventListener('change', updateTotal2);
+endBreak22.addEventListener('change', updateTotal2);
+
+function updateTotal2() {
+  const startTime = updateTimeValue(startTimeInput2.value);
+  const stbreak = updateTimeValue(startBreak12.value);
+  const endbreak = updateTimeValue(endBreak12.value);
+  const stbreak2 = updateTimeValue(startBreak22.value);
+  const endbreak2 = updateTimeValue(endBreak22.value);
+  const endTime = updateTimeValue(endTimeInput2.value);
+
+  console.log(startTime, stbreak, endbreak, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput2.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput2.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak12.value = '';
+      endBreak12.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak12.value = '';
+      endBreak12.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak12.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak22.value = '';
+      endBreak22.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak22.value = '';
+      endBreak22.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak22.value = '';
+      endBreak22.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak22.value = '';
+      endBreak22.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak22.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60)); // Round to the nearest integer
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60)); // Round to the nearest integer
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+      const totHRs = diffInHours - diffInBRHours;
+      const totHRs2 = diffInHours - (diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)) {
+        totalInput2.value = diffInHours;
+      } else if (isNaN(diffInBR2Hours)) {
+        totalInput2.value = totHRs;
+      } else {
+        totalInput2.value = totHRs2;
       }
-      
-      function updateTotal1() {
-        const startTime = updateTimeValue(startTimeInput.value);
-        const endTime = updateTimeValue(endTimeInput.value);
-        console.log(startTime, endTime);
-      
-        if (startTime && endTime) {
-          if (endTime < startTime) {
-            totalInput.value = '';
-            endTimeInput.value = '';
-            alert("End time cannot be earlier than start time.");
-          } else if (endTime.getTime() === startTime.getTime()) {
-            totalInput.value = '';
-            endTimeInput.value = '';
-            alert("Start time and end time cannot be the same.");
-          } else {
-            const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-            totalInput.value = diffInHours;
-          }
-        }
+    }
+  }
+}
+
+                
+                      
+                              
+                      
+                      
+const startTimeInput3 = document.getElementById('Start3');
+const startBreak13 = document.getElementById('STbreak13');
+const endBreak13 = document.getElementById('ENDbreak13');
+const startBreak23 = document.getElementById('STbreak23');
+const endBreak23 = document.getElementById('ENDbreak23');
+const endTimeInput3 = document.getElementById('end3');
+const totalInput3 = document.getElementById('total3');
+
+startTimeInput3.addEventListener('change', updateTotal3);
+endTimeInput3.addEventListener('change', updateTotal3);
+startBreak13.addEventListener('change', updateTotal3);
+endBreak13.addEventListener('change', updateTotal3);
+
+startBreak23.addEventListener('change', updateTotal3);
+endBreak23.addEventListener('change', updateTotal3);
+
+function updateTotal3() {
+  const startTime = updateTimeValue(startTimeInput3.value);
+  const stbreak = updateTimeValue(startBreak13.value);
+  const endbreak = updateTimeValue(endBreak13.value);
+  const stbreak2 = updateTimeValue(startBreak23.value);
+  const endbreak2 = updateTimeValue(endBreak23.value);
+  const endTime = updateTimeValue(endTimeInput3.value);
+
+  console.log(startTime, stbreak, endbreak, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput3.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput3.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak13.value = '';
+      endBreak13.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak13.value = '';
+      endBreak13.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak13.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak23.value = '';
+      endBreak23.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak23.value = '';
+      endBreak23.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak23.value = '';
+      endBreak23.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak23.value = '';
+      endBreak23.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak23.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60)); // Round to the nearest integer
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60)); // Round to the nearest integer
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+      const totHRs = diffInHours - diffInBRHours ;
+      const totHRs2 = diffInHours - ( diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)){
+        totalInput3.value = diffInHours;
       }
-      
-            
-            
-              
-              const startTimeInput2 = document.getElementById('Start2');
-              const endTimeInput2 = document.getElementById('end2');
-              const totalInput2 = document.getElementById('total2');
-            
-              startTimeInput2.addEventListener('change', updateTotal2);
-              endTimeInput2.addEventListener('change', updateTotal2);
-            
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal2() {
-                const startTime = updateTimeValue(startTimeInput2.value);
-                const endTime = updateTimeValue(endTimeInput2.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput2.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput2.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput2.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
-            
-            
-              
-              const startTimeInput3 = document.getElementById('Start3');
-              const endTimeInput3 = document.getElementById('end3');
-              const totalInput3 = document.getElementById('total3');
-            
-              startTimeInput3.addEventListener('change', updateTotal3);
-              endTimeInput3.addEventListener('change', updateTotal3);
-            
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal3() {
-                const startTime = updateTimeValue(startTimeInput3.value);
-                const endTime = updateTimeValue(endTimeInput3.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput3.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput3.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput3.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
-            
-            
-            
-              
-              const startTimeInput4 = document.getElementById('Start4');
-              const endTimeInput4 = document.getElementById('end4');
-              const totalInput4 = document.getElementById('total4');
-            
-              startTimeInput4.addEventListener('change', updateTotal4);
-              endTimeInput4.addEventListener('change', updateTotal4);
-            
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal4() {
-                const startTime = updateTimeValue(startTimeInput4.value);
-                const endTime = updateTimeValue(endTimeInput4.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput4.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput4.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput4.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
-            
-            
-              
-              const startTimeInput5 = document.getElementById('Start5');
-              const endTimeInput5 = document.getElementById('end5');
-              const totalInput5 = document.getElementById('total5');
-            
-              startTimeInput5.addEventListener('change', updateTotal5);
-              endTimeInput5.addEventListener('change', updateTotal5);
-            
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal5() {
-                const startTime = updateTimeValue(startTimeInput5.value);
-                const endTime = updateTimeValue(endTimeInput5.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput5.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput5.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput5.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
-            
-              
-              const startTimeInput6 = document.getElementById('Start6');
-              const endTimeInput6 = document.getElementById('end6');
-              const totalInput6 = document.getElementById('total6');
-            
-              startTimeInput6.addEventListener('change', updateTotal);
-              endTimeInput6.addEventListener('change', updateTotal);
-              console.log (startTimeInput6,endTimeInput6.value)
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal() {
-                const startTime = updateTimeValue(startTimeInput6.value);
-                const endTime = updateTimeValue(endTimeInput6.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput6.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput6.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput6.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
-              const startTimeInput7 = document.getElementById('Start7');
-              const endTimeInput7 = document.getElementById('end7');
-              const totalInput7 = document.getElementById('total7');
-            
-              startTimeInput7.addEventListener('change', updateTotal);
-              endTimeInput7.addEventListener('change', updateTotal);
-              console.log (startTimeInput7,endTimeInput7.value)
-              function updateTimeValue(timeString) {
-                const [hours, minutes] = timeString.split(":");
-                const d = new Date();
-                d.setHours(hours);
-                d.setMinutes(minutes);
-                return d;
-              }
-            
-              function updateTotal() {
-                const startTime = updateTimeValue(startTimeInput7.value);
-                const endTime = updateTimeValue(endTimeInput7.value);
-                console.log (startTime,endTime)
-            
-                if (startTime && endTime) {
-                  if (endTime < startTime) {
-                    totalInput7.value = '';
-                    alert("End time cannot be earlier than start time.");
-                  } else if (endTime.getTime() === startTime.getTime()) {
-                    totalInput7.value = '';
-                    alert("Start time and end time cannot be the same.");
-                  } else {
-                    const diffInMilliseconds = endTime - startTime;
-            const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
-                    totalInput7.value = diffInHours;
-                  }
-                }
-              }
-            
-            
-            
+      else if (isNaN(diffInBR2Hours)) {
+        totalInput3.value = totHRs;
+      } else {
+        totalInput3.value = totHRs2;
+      }
+    }
+  }
+}
+
+                
+                      
+               
+const startTimeInput4 = document.getElementById('Start4');
+const startBreak14 = document.getElementById('STbreak14');
+const endBreak14 = document.getElementById('ENDbreak14');
+const startBreak24 = document.getElementById('STbreak24');
+const endBreak24 = document.getElementById('ENDbreak24');
+const endTimeInput4 = document.getElementById('end4');
+const totalInput4 = document.getElementById('total4');
+
+startTimeInput4.addEventListener('change', updateTotal4);
+endTimeInput4.addEventListener('change', updateTotal4);
+startBreak14.addEventListener('change', updateTotal4);
+endBreak14.addEventListener('change', updateTotal4);
+
+startBreak24.addEventListener('change', updateTotal4);
+endBreak24.addEventListener('change', updateTotal4);
+
+function updateTotal4() {
+  const startTime = updateTimeValue(startTimeInput4.value);
+  const stbreak = updateTimeValue(startBreak14.value);
+  const endbreak = updateTimeValue(endBreak14.value);
+  const stbreak2 = updateTimeValue(startBreak24.value);
+  const endbreak2 = updateTimeValue(endBreak24.value);
+  const endTime = updateTimeValue(endTimeInput4.value);
+
+  console.log(startTime, stbreak, endbreak, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput4.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput4.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak14.value = '';
+      endBreak14.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak14.value = '';
+      endBreak14.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak14.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak24.value = '';
+      endBreak24.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak24.value = '';
+      endBreak24.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak24.value = '';
+      endBreak24.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak24.value = '';
+      endBreak24.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak24.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60)); // Round to the nearest integer
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60)); // Round to the nearest integer
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+      const totHRs = diffInHours - diffInBRHours ;
+      const totHRs2 = diffInHours - ( diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)){
+        totalInput4.value = diffInHours;
+      }
+      else if (isNaN(diffInBR2Hours)) {
+        totalInput4.value = totHRs;
+      } else {
+        totalInput4.value = totHRs2;
+
+      }
+    }
+  }
+}
+
+                
+                      
+        
+                      
+                      
+const startTimeInput5 = document.getElementById('Start5');
+const startBreak15 = document.getElementById('STbreak15');
+const endBreak15 = document.getElementById('ENDbreak15');
+const startBreak25 = document.getElementById('STbreak25');
+const endBreak25 = document.getElementById('ENDbreak25');
+const endTimeInput5 = document.getElementById('end5');
+const totalInput5 = document.getElementById('total5');
+
+startTimeInput5.addEventListener('change', updateTotal5);
+endTimeInput5.addEventListener('change', updateTotal5);
+startBreak15.addEventListener('change', updateTotal5);
+endBreak15.addEventListener('change', updateTotal5);
+startBreak25.addEventListener('change', updateTotal5);
+endBreak25.addEventListener('change', updateTotal5);
+
+function updateTotal5() {
+  const startTime = updateTimeValue(startTimeInput5.value);
+  const stbreak = updateTimeValue(startBreak15.value);
+  const endbreak = updateTimeValue(endBreak15.value);
+  const stbreak2 = updateTimeValue(startBreak25.value);
+  const endbreak2 = updateTimeValue(endBreak25.value);
+  const endTime = updateTimeValue(endTimeInput5.value);
+
+  console.log(startTime, stbreak, endbreak, stbreak2, endbreak2, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput5.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput5.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak15.value = '';
+      endBreak15.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak15.value = '';
+      endBreak15.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak15.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak25.value = '';
+      endBreak25.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak25.value = '';
+      endBreak25.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak25.value = '';
+      endBreak25.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak25.value = '';
+      endBreak25.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak25.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60));
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60));
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60));
+      const totHRs = diffInHours - diffInBRHours;
+      const totHRs2 = diffInHours - (diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)) {
+        totalInput5.value = diffInHours;
+      } else if (isNaN(diffInBR2Hours)) {
+        totalInput5.value = totHRs;
+      } else {
+        totalInput5.value = totHRs2;
+      }
+    }
+  }
+}
+
+                      
+        
+                      
+           // Get references to the input elements for the sixth set of time-related inputs
+const startTimeInput6 = document.getElementById('Start6');
+const startBreak16 = document.getElementById('STbreak16');
+const endBreak16 = document.getElementById('ENDbreak16');
+const startBreak26 = document.getElementById('STbreak26');
+const endBreak26 = document.getElementById('ENDbreak26');
+const endTimeInput6 = document.getElementById('end6');
+const totalInput6 = document.getElementById('total6');
+
+// Add event listeners for changes to these input elements
+startTimeInput6.addEventListener('change', updateTotal6);
+endTimeInput6.addEventListener('change', updateTotal6);
+startBreak16.addEventListener('change', updateTotal6);
+endBreak16.addEventListener('change', updateTotal6);
+startBreak26.addEventListener('change', updateTotal6);
+endBreak26.addEventListener('change', updateTotal6);
+
+// Function to update the total based on the sixth set of inputs
+function updateTotal6() {
+  const startTime = updateTimeValue(startTimeInput6.value);
+  const stbreak = updateTimeValue(startBreak16.value);
+  const endbreak = updateTimeValue(endBreak16.value);
+  const stbreak2 = updateTimeValue(startBreak26.value);
+  const endbreak2 = updateTimeValue(endBreak26.value);
+  const endTime = updateTimeValue(endTimeInput6.value);
+
+  console.log(startTime, stbreak, endbreak, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput6.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput6.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak16.value = '';
+      endBreak16.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak16.value = '';
+      endBreak16.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak16.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak26.value = '';
+      endBreak26.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak26.value = '';
+      endBreak26.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak26.value = '';
+      endBreak26.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak26.value = '';
+      endBreak26.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak26.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60));
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60));
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60));
+      const totHRs = diffInHours - diffInBRHours;
+      const totHRs2 = diffInHours - (diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)) {
+        totalInput6.value = diffInHours;
+      } else if (isNaN(diffInBR2Hours)) {
+        totalInput6.value = totHRs;
+      } else {
+        totalInput6.value = totHRs2;
+      }
+    }
+  }
+}
+
+                
+const startTimeInput7 = document.getElementById('Start7');
+const startBreak17 = document.getElementById('STbreak17');
+const endBreak17 = document.getElementById('ENDbreak17');
+const startBreak27 = document.getElementById('STbreak27');
+const endBreak27 = document.getElementById('ENDbreak27');
+const endTimeInput7 = document.getElementById('end7');
+const totalInput7 = document.getElementById('total7');
+
+startTimeInput7.addEventListener('change', updateTotal7);
+endTimeInput7.addEventListener('change', updateTotal7);
+startBreak17.addEventListener('change', updateTotal7);
+endBreak17.addEventListener('change', updateTotal7);
+startBreak27.addEventListener('change', updateTotal7);
+endBreak27.addEventListener('change', updateTotal7);
+
+function updateTotal7() {
+  const startTime = updateTimeValue(startTimeInput7.value);
+  const stbreak = updateTimeValue(startBreak17.value);
+  const endbreak = updateTimeValue(endBreak17.value);
+  const stbreak2 = updateTimeValue(startBreak27.value);
+  const endbreak2 = updateTimeValue(endBreak27.value);
+  const endTime = updateTimeValue(endTimeInput7.value);
+
+  console.log(startTime, stbreak, endbreak, endTime);
+
+  if (startTime && endTime) {
+    if (endTime < startTime) {
+      endTimeInput7.value = '';
+      alert("End time cannot be earlier than start time.");
+    } else if (endTime.getTime() === startTime.getTime()) {
+      endTimeInput7.value = '';
+      alert("Start time and end time cannot be the same.");
+    } else if (stbreak < startTime || endbreak < startTime) {
+      startBreak17.value = '';
+      endBreak17.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak > endTime || stbreak > endTime) {
+      startBreak17.value = '';
+      endBreak17.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak < stbreak) {
+      endBreak17.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else if (stbreak2 < startTime || endbreak2 < startTime) {
+      startBreak27.value = '';
+      endBreak27.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 > endTime || stbreak2 > endTime) {
+      startBreak27.value = '';
+      endBreak27.value = '';
+      alert("Break time should be within the working hours.");
+    } else if (endbreak2 < endbreak || stbreak2 < endbreak) {
+      startBreak27.value = '';
+      endBreak27.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak || stbreak2 < stbreak) {
+      startBreak27.value = '';
+      endBreak27.value = '';
+      alert("2nd break time cannot be earlier than 1st break time.");
+    } else if (endbreak2 < stbreak2) {
+      endBreak27.value = '';
+      alert("End break time cannot be earlier than start break time.");
+    } else {
+      const BR = endbreak - stbreak;
+      const diffInBRHours = Math.round(BR / (1000 * 60 * 60)); // Round to the nearest integer
+      const BR2 = endbreak2 - stbreak2;
+      const diffInBR2Hours = Math.round(BR2 / (1000 * 60 * 60)); // Round to the nearest integer
+
+      const diffInMilliseconds = endTime - startTime;
+      const diffInHours = Math.round(diffInMilliseconds / (1000 * 60 * 60)); // Round to the nearest integer
+      const totHRs = diffInHours - diffInBRHours;
+      const totHRs2 = diffInHours - (diffInBR2Hours + diffInBRHours);
+
+      if (isNaN(diffInBRHours)) {
+        totalInput7.value = diffInHours;
+      } else if (isNaN(diffInBR2Hours)) {
+        totalInput7.value = totHRs;
+      } else {
+        totalInput7.value = totHRs2;
+      }
+    }
+  }
+}
+
+                
+                      
+        
+                      
+                      
+                   
          </script>
    </body>
